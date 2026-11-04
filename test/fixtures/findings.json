@@ -1,0 +1,6829 @@
+{
+  "probedAt": "2026-11-04T13:07:42.571Z",
+  "docs": "https://bible.fhl.net/api/",
+  "results": {
+    "abv.php": {
+      "sectionHash": "9afd6a4d6e1a010246695945b5a67342835d59a8965041126bb78c690f1b9f69",
+      "sample": {},
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [],
+      "enumEffect": {
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "cec3996f439d"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "ea943f092116"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/abv.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 13051,
+          "bodyHash": "ea943f092116",
+          "status": "success",
+          "record_count": 88,
+          "keys": [
+            "status",
+            "parsing",
+            "comment",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "cname",
+            "proc",
+            "strong",
+            "ntonly",
+            "candownload",
+            "otonly",
+            "version"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/abv.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 13051,
+          "bodyHash": "ea943f092116",
+          "status": "success",
+          "record_count": 88,
+          "keys": [
+            "status",
+            "parsing",
+            "comment",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "cname",
+            "proc",
+            "strong",
+            "ntonly",
+            "candownload",
+            "otonly",
+            "version"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/abv.php?gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 13051,
+          "bodyHash": "cec3996f439d",
+          "status": "success",
+          "record_count": 88,
+          "keys": [
+            "status",
+            "parsing",
+            "comment",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "cname",
+            "proc",
+            "strong",
+            "ntonly",
+            "candownload",
+            "otonly",
+            "version"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/abv.php?gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 13051,
+          "bodyHash": "ea943f092116",
+          "status": "success",
+          "record_count": 88,
+          "keys": [
+            "status",
+            "parsing",
+            "comment",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "cname",
+            "proc",
+            "strong",
+            "ntonly",
+            "candownload",
+            "otonly",
+            "version"
+          ]
+        }
+      ]
+    },
+    "ab.php": {
+      "sectionHash": "3d801966d7c0d4f79d54354af94670a63415294494d669af3a9a61b7acb41deb",
+      "sample": {},
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [],
+      "enumEffect": {},
+      "caseSensitive": {},
+      "addingChangesResult": [],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/ab.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 9601,
+          "bodyHash": "d3ee86083b41",
+          "status": "success",
+          "record_count": 86,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "cname",
+            "proc",
+            "strong",
+            "ntonly",
+            "otonly"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/ab.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 9601,
+          "bodyHash": "d3ee86083b41",
+          "status": "success",
+          "record_count": 86,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "cname",
+            "proc",
+            "strong",
+            "ntonly",
+            "otonly"
+          ]
+        }
+      ]
+    },
+    "listall.html": {
+      "sectionHash": "0cbb7940a6503ddbdcebd3cd63af48c6aa6aff63ed333e6e772d5c214b21ee76",
+      "sample": {},
+      "formats": [
+        "csv (text/html)"
+      ],
+      "requiredCandidates": [],
+      "enumEffect": {},
+      "caseSensitive": {},
+      "addingChangesResult": [],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/listall.html",
+          "http": 200,
+          "contentType": "text/html",
+          "format": "csv",
+          "bytes": 1870,
+          "bodyHash": "228acb171379",
+          "snippet": "1,Gen,Genesis,創,創世記,Ge\n2,Ex,Exodus,出,出埃及記,Ex\n3,Lev,Leviticus,利,利未記,Le\n4,Num,Numbers,民,民數記,Nu\n5,Deut,Deuteronomy,申,申命記,De\n6,Josh,Joshua,書,約書亞記,Jos\n7,Judg,Judges,"
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/listall.html",
+          "http": 200,
+          "contentType": "text/html",
+          "format": "csv",
+          "bytes": 1870,
+          "bodyHash": "228acb171379",
+          "snippet": "1,Gen,Genesis,創,創世記,Ge\n2,Ex,Exodus,出,出埃及記,Ex\n3,Lev,Leviticus,利,利未記,Le\n4,Num,Numbers,民,民數記,Nu\n5,Deut,Deuteronomy,申,申命記,De\n6,Josh,Joshua,書,約書亞記,Jos\n7,Judg,Judges,"
+        }
+      ]
+    },
+    "qb.php": {
+      "sectionHash": "637672e50f2827a92ed87af60adaa7b46278df3a1e568019900731fe73dc5ab3",
+      "sample": {
+        "bid": 43,
+        "chap": 3,
+        "sec": "16"
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [],
+      "enumEffect": {
+        "strong": [
+          {
+            "label": "要",
+            "code": "1",
+            "ok": false,
+            "bodyHash": "f77a39542a63"
+          },
+          {
+            "label": "不要",
+            "code": "0",
+            "ok": false,
+            "bodyHash": "f77a39542a63"
+          }
+        ],
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": false,
+            "bodyHash": "f77a39542a63"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": false,
+            "bodyHash": "f77a39542a63"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/qb.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 33,
+          "bodyHash": "f77a39542a63",
+          "status": "Fail:version Error!",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/qb.php?bid=43&chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 33,
+          "bodyHash": "f77a39542a63",
+          "status": "Fail:version Error!",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "drop bid",
+          "url": "https://bible.fhl.net/api/qb.php?chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 33,
+          "bodyHash": "f77a39542a63",
+          "status": "Fail:version Error!",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "drop chap",
+          "url": "https://bible.fhl.net/api/qb.php?bid=43&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 33,
+          "bodyHash": "f77a39542a63",
+          "status": "Fail:version Error!",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "drop sec",
+          "url": "https://bible.fhl.net/api/qb.php?bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 33,
+          "bodyHash": "f77a39542a63",
+          "status": "Fail:version Error!",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "strong=要",
+          "url": "https://bible.fhl.net/api/qb.php?bid=43&chap=3&sec=16&strong=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 33,
+          "bodyHash": "f77a39542a63",
+          "status": "Fail:version Error!",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "strong=不要",
+          "url": "https://bible.fhl.net/api/qb.php?bid=43&chap=3&sec=16&strong=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 33,
+          "bodyHash": "f77a39542a63",
+          "status": "Fail:version Error!",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/qb.php?bid=43&chap=3&sec=16&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 33,
+          "bodyHash": "f77a39542a63",
+          "status": "Fail:version Error!",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/qb.php?bid=43&chap=3&sec=16&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 33,
+          "bodyHash": "f77a39542a63",
+          "status": "Fail:version Error!",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "add version=nstrunv",
+          "url": "https://bible.fhl.net/api/qb.php?bid=43&chap=3&sec=16&version=nstrunv",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 33,
+          "bodyHash": "f77a39542a63",
+          "status": "Fail:version Error!",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "sec list 1-2,5",
+          "url": "https://bible.fhl.net/api/qb.php?bid=43&chap=3&sec=1-2%2C5",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 33,
+          "bodyHash": "f77a39542a63",
+          "status": "Fail:version Error!",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "whole chapter",
+          "url": "https://bible.fhl.net/api/qb.php?bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 33,
+          "bodyHash": "f77a39542a63",
+          "status": "Fail:version Error!",
+          "keys": [
+            "status"
+          ]
+        }
+      ]
+    },
+    "rt.php": {
+      "sectionHash": "a79335ff7f5046a847a7c54dd520e9f6e69af9c0b84061cff191d3d8de5c3008",
+      "sample": {
+        "bid": 43,
+        "chap": 3,
+        "version": "tcv"
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [],
+      "enumEffect": {
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": false,
+            "bodyHash": "3c2284f36537"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": false,
+            "bodyHash": "3c2284f36537"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [
+        "id"
+      ],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/rt.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 68,
+          "bodyHash": "b9f5d5f86c43",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count",
+            "version",
+            "engs"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/rt.php?bid=43&chap=3&version=tcv",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 72,
+          "bodyHash": "3c2284f36537",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count",
+            "version",
+            "engs"
+          ]
+        },
+        {
+          "label": "drop bid",
+          "url": "https://bible.fhl.net/api/rt.php?chap=3&version=tcv",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 68,
+          "bodyHash": "b9f5d5f86c43",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count",
+            "version",
+            "engs"
+          ]
+        },
+        {
+          "label": "drop chap",
+          "url": "https://bible.fhl.net/api/rt.php?bid=43&version=tcv",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 72,
+          "bodyHash": "3c2284f36537",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count",
+            "version",
+            "engs"
+          ]
+        },
+        {
+          "label": "drop version",
+          "url": "https://bible.fhl.net/api/rt.php?bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 72,
+          "bodyHash": "3c2284f36537",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count",
+            "version",
+            "engs"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/rt.php?bid=43&chap=3&version=tcv&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 72,
+          "bodyHash": "3c2284f36537",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count",
+            "version",
+            "engs"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/rt.php?bid=43&chap=3&version=tcv&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 72,
+          "bodyHash": "3c2284f36537",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count",
+            "version",
+            "engs"
+          ]
+        },
+        {
+          "label": "add id=1",
+          "url": "https://bible.fhl.net/api/rt.php?bid=43&chap=3&version=tcv&id=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 248,
+          "bodyHash": "999af0d0ed4d",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "version",
+            "engs",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "text"
+          ]
+        },
+        {
+          "label": "with id 1",
+          "url": "https://bible.fhl.net/api/rt.php?bid=43&chap=3&version=tcv&id=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 248,
+          "bodyHash": "999af0d0ed4d",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "version",
+            "engs",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "text"
+          ]
+        }
+      ]
+    },
+    "qp.php": {
+      "sectionHash": "5b8d5c962b3b18829ec511cab66b04cb278b710e90f7951dfde5ae6b7bc884fb",
+      "sample": {
+        "bid": 43,
+        "chap": 3,
+        "sec": 16
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)",
+        "text (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [
+        "bid"
+      ],
+      "enumEffect": {
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "6b58fa63c9c5"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "dd8a3a3fe2e5"
+          }
+        ],
+        "disubs5": [
+          {
+            "label": "不顯示",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "dd8a3a3fe2e5"
+          },
+          {
+            "label": "顯示",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "dd8a3a3fe2e5"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/qp.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 30,
+          "bodyHash": "2b31532ed507",
+          "status": "Fail:engs error!",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/qp.php?bid=43&chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 9332,
+          "bodyHash": "dd8a3a3fe2e5",
+          "status": "success",
+          "record_count": 26,
+          "keys": [
+            "status",
+            "record_count",
+            "N",
+            "ubs",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "id",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "wid",
+            "word",
+            "exp",
+            "chineses",
+            "chinesef"
+          ]
+        },
+        {
+          "label": "drop bid",
+          "url": "https://bible.fhl.net/api/qp.php?chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 30,
+          "bodyHash": "2b31532ed507",
+          "status": "Fail:engs error!",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "drop chap",
+          "url": "https://bible.fhl.net/api/qp.php?bid=43&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "text",
+          "bytes": 205,
+          "bodyHash": "c07032b71b8e",
+          "snippet": "{\n\"status\":\"success\",\n\"record_count\":0,\n\"N\":0,\n\"ubs\":\"ubs4\",\n\"record\":[],\"prev\":{\"chineses\":\"\\u5275\",\n\"bid\":1,\n\"engs\":\"Gen\",\n\"chap\":1,\"sec\":1}\n,\"next\":{\"chinese"
+        },
+        {
+          "label": "drop sec",
+          "url": "https://bible.fhl.net/api/qp.php?bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "text",
+          "bytes": 205,
+          "bodyHash": "c07032b71b8e",
+          "snippet": "{\n\"status\":\"success\",\n\"record_count\":0,\n\"N\":0,\n\"ubs\":\"ubs4\",\n\"record\":[],\"prev\":{\"chineses\":\"\\u5275\",\n\"bid\":1,\n\"engs\":\"Gen\",\n\"chap\":1,\"sec\":1}\n,\"next\":{\"chinese"
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/qp.php?bid=43&chap=3&sec=16&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 9332,
+          "bodyHash": "6b58fa63c9c5",
+          "status": "success",
+          "record_count": 26,
+          "keys": [
+            "status",
+            "record_count",
+            "N",
+            "ubs",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "id",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "wid",
+            "word",
+            "exp",
+            "chineses",
+            "chinesef"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/qp.php?bid=43&chap=3&sec=16&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 9332,
+          "bodyHash": "dd8a3a3fe2e5",
+          "status": "success",
+          "record_count": 26,
+          "keys": [
+            "status",
+            "record_count",
+            "N",
+            "ubs",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "id",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "wid",
+            "word",
+            "exp",
+            "chineses",
+            "chinesef"
+          ]
+        },
+        {
+          "label": "disubs5=不顯示",
+          "url": "https://bible.fhl.net/api/qp.php?bid=43&chap=3&sec=16&disubs5=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 9332,
+          "bodyHash": "dd8a3a3fe2e5",
+          "status": "success",
+          "record_count": 26,
+          "keys": [
+            "status",
+            "record_count",
+            "N",
+            "ubs",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "id",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "wid",
+            "word",
+            "exp",
+            "chineses",
+            "chinesef"
+          ]
+        },
+        {
+          "label": "disubs5=顯示",
+          "url": "https://bible.fhl.net/api/qp.php?bid=43&chap=3&sec=16&disubs5=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 9332,
+          "bodyHash": "dd8a3a3fe2e5",
+          "status": "success",
+          "record_count": 26,
+          "keys": [
+            "status",
+            "record_count",
+            "N",
+            "ubs",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "id",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "wid",
+            "word",
+            "exp",
+            "chineses",
+            "chinesef"
+          ]
+        }
+      ]
+    },
+    "sc.php": {
+      "sectionHash": "86831fb6c59a60391b30d6b8cf0c424b174d108fdc8de670d93376dccf40f8d0",
+      "sample": {
+        "book": 3,
+        "bid": 43,
+        "chap": 3,
+        "sec": 16
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [
+        "bid",
+        "chap",
+        "sec"
+      ],
+      "enumEffect": {
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "dad6ae198bb7"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "54d6a9f3b35a"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [
+        "validbook"
+      ],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/sc.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 40,
+          "bodyHash": "5507180d5455",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/sc.php?book=3&bid=43&chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 15029,
+          "bodyHash": "54d6a9f3b35a",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "prev",
+            "next",
+            "record"
+          ],
+          "recordKeys": [
+            "title",
+            "book_name",
+            "com_text"
+          ]
+        },
+        {
+          "label": "drop book",
+          "url": "https://bible.fhl.net/api/sc.php?bid=43&chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 15027,
+          "bodyHash": "6f91fa2f4cdb",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "prev",
+            "next",
+            "record"
+          ],
+          "recordKeys": [
+            "title",
+            "book_name",
+            "com_text"
+          ]
+        },
+        {
+          "label": "drop bid",
+          "url": "https://bible.fhl.net/api/sc.php?book=3&chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 40,
+          "bodyHash": "5507180d5455",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count"
+          ]
+        },
+        {
+          "label": "drop chap",
+          "url": "https://bible.fhl.net/api/sc.php?book=3&bid=43&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 40,
+          "bodyHash": "5507180d5455",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count"
+          ]
+        },
+        {
+          "label": "drop sec",
+          "url": "https://bible.fhl.net/api/sc.php?book=3&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 40,
+          "bodyHash": "5507180d5455",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/sc.php?book=3&bid=43&chap=3&sec=16&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 15029,
+          "bodyHash": "dad6ae198bb7",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "prev",
+            "next",
+            "record"
+          ],
+          "recordKeys": [
+            "title",
+            "book_name",
+            "com_text"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/sc.php?book=3&bid=43&chap=3&sec=16&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 15029,
+          "bodyHash": "54d6a9f3b35a",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "prev",
+            "next",
+            "record"
+          ],
+          "recordKeys": [
+            "title",
+            "book_name",
+            "com_text"
+          ]
+        },
+        {
+          "label": "add validbook=1",
+          "url": "https://bible.fhl.net/api/sc.php?book=3&bid=43&chap=3&sec=16&validbook=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 421,
+          "bodyHash": "39cd8a240205",
+          "status": "success",
+          "record_count": 7,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "name"
+          ]
+        },
+        {
+          "label": "validbook only",
+          "url": "https://bible.fhl.net/api/sc.php?validbook=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 421,
+          "bodyHash": "39cd8a240205",
+          "status": "success",
+          "record_count": 7,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "name"
+          ]
+        },
+        {
+          "label": "validbook + sample",
+          "url": "https://bible.fhl.net/api/sc.php?validbook=1&book=3&bid=43&chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 421,
+          "bodyHash": "39cd8a240205",
+          "status": "success",
+          "record_count": 7,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "name"
+          ]
+        },
+        {
+          "label": "multi book 1,3",
+          "url": "https://bible.fhl.net/api/sc.php?book=1%2C3&bid=43&chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 15033,
+          "bodyHash": "4fc3f436f9a6",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "prev",
+            "next",
+            "record"
+          ],
+          "recordKeys": [
+            "title",
+            "book_name",
+            "com_text"
+          ]
+        }
+      ]
+    },
+    "ssc.php": {
+      "sectionHash": "02e1399fd8e2bd8df8ab4b48d5b203d8381ad2e13ab839e23e9533d07838e6ab",
+      "sample": {
+        "book": 3,
+        "key": "尼哥底母"
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [
+        "key"
+      ],
+      "enumEffect": {
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "8d07fbf2f623"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "da932133c141"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/ssc.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 38,
+          "bodyHash": "6b85ea421523",
+          "status": "Fail:record count > 500",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/ssc.php?book=3&key=%E5%B0%BC%E5%93%A5%E5%BA%95%E6%AF%8D",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1460,
+          "bodyHash": "da932133c141",
+          "status": "success",
+          "record_count": 5,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "title",
+            "tag",
+            "book_name",
+            "chinesef",
+            "bid",
+            "engs",
+            "bchap",
+            "bsec",
+            "echap",
+            "esec"
+          ]
+        },
+        {
+          "label": "drop book",
+          "url": "https://bible.fhl.net/api/ssc.php?key=%E5%B0%BC%E5%93%A5%E5%BA%95%E6%AF%8D",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1460,
+          "bodyHash": "da932133c141",
+          "status": "success",
+          "record_count": 5,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "title",
+            "tag",
+            "book_name",
+            "chinesef",
+            "bid",
+            "engs",
+            "bchap",
+            "bsec",
+            "echap",
+            "esec"
+          ]
+        },
+        {
+          "label": "drop key",
+          "url": "https://bible.fhl.net/api/ssc.php?book=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 38,
+          "bodyHash": "6b85ea421523",
+          "status": "Fail:record count > 500",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/ssc.php?book=3&key=%E5%B0%BC%E5%93%A5%E5%BA%95%E6%AF%8D&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1460,
+          "bodyHash": "8d07fbf2f623",
+          "status": "success",
+          "record_count": 5,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "title",
+            "tag",
+            "book_name",
+            "chinesef",
+            "bid",
+            "engs",
+            "bchap",
+            "bsec",
+            "echap",
+            "esec"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/ssc.php?book=3&key=%E5%B0%BC%E5%93%A5%E5%BA%95%E6%AF%8D&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1460,
+          "bodyHash": "da932133c141",
+          "status": "success",
+          "record_count": 5,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "title",
+            "tag",
+            "book_name",
+            "chinesef",
+            "bid",
+            "engs",
+            "bchap",
+            "bsec",
+            "echap",
+            "esec"
+          ]
+        }
+      ]
+    },
+    "sd.php": {
+      "sectionHash": "03c71558217370e2b3dc3928822e99762eef647ef0f4877a01e5ded1fa71009a",
+      "sample": {
+        "N": 0,
+        "k": "25"
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [],
+      "enumEffect": {
+        "N": [
+          {
+            "label": "新約",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "5050281ee9a7"
+          },
+          {
+            "label": "舊約",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "3a2446bf8a9a"
+          }
+        ],
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "5fd17bf5be64"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "5050281ee9a7"
+          }
+        ]
+      },
+      "caseSensitive": {
+        "N": true
+      },
+      "addingChangesResult": [],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/sd.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 924,
+          "bodyHash": "65c353cd10b2",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text",
+            "edic_text",
+            "dic_type",
+            "orig",
+            "same"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/sd.php?N=0&k=25",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1476,
+          "bodyHash": "5050281ee9a7",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text",
+            "edic_text",
+            "dic_type",
+            "orig",
+            "same"
+          ]
+        },
+        {
+          "label": "drop N",
+          "url": "https://bible.fhl.net/api/sd.php?k=25",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1476,
+          "bodyHash": "5050281ee9a7",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text",
+            "edic_text",
+            "dic_type",
+            "orig",
+            "same"
+          ]
+        },
+        {
+          "label": "drop k",
+          "url": "https://bible.fhl.net/api/sd.php?N=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 924,
+          "bodyHash": "65c353cd10b2",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text",
+            "edic_text",
+            "dic_type",
+            "orig",
+            "same"
+          ]
+        },
+        {
+          "label": "N=新約",
+          "url": "https://bible.fhl.net/api/sd.php?N=0&k=25",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1476,
+          "bodyHash": "5050281ee9a7",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text",
+            "edic_text",
+            "dic_type",
+            "orig",
+            "same"
+          ]
+        },
+        {
+          "label": "N=舊約",
+          "url": "https://bible.fhl.net/api/sd.php?N=1&k=25",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 798,
+          "bodyHash": "3a2446bf8a9a",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text",
+            "edic_text",
+            "dic_type",
+            "orig",
+            "same"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/sd.php?N=0&k=25&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1476,
+          "bodyHash": "5fd17bf5be64",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text",
+            "edic_text",
+            "dic_type",
+            "orig",
+            "same"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/sd.php?N=0&k=25&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1476,
+          "bodyHash": "5050281ee9a7",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text",
+            "edic_text",
+            "dic_type",
+            "orig",
+            "same"
+          ]
+        },
+        {
+          "label": "case N",
+          "url": "https://bible.fhl.net/api/sd.php?N=1&k=25",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 798,
+          "bodyHash": "3a2446bf8a9a",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text",
+            "edic_text",
+            "dic_type",
+            "orig",
+            "same"
+          ]
+        },
+        {
+          "label": "case n",
+          "url": "https://bible.fhl.net/api/sd.php?N=0&k=25&n=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1476,
+          "bodyHash": "5050281ee9a7",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text",
+            "edic_text",
+            "dic_type",
+            "orig",
+            "same"
+          ]
+        }
+      ]
+    },
+    "sbdag.php": {
+      "sectionHash": "5152e7067ac448a4d2920f78c2f556f57b723bb5fcad222764576af3e93bd57d",
+      "sample": {
+        "k": "25"
+      },
+      "formats": [
+        "json (text/html)"
+      ],
+      "requiredCandidates": [],
+      "enumEffect": {
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "0c50a5c59a62"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "f31563a555cf"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/sbdag.php",
+          "http": 200,
+          "contentType": "text/html",
+          "format": "json",
+          "bytes": 81,
+          "bodyHash": "4d66bcf33f1e",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/sbdag.php?k=25",
+          "http": 200,
+          "contentType": "text/html",
+          "format": "json",
+          "bytes": 10009,
+          "bodyHash": "f31563a555cf",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text"
+          ]
+        },
+        {
+          "label": "drop k",
+          "url": "https://bible.fhl.net/api/sbdag.php",
+          "http": 200,
+          "contentType": "text/html",
+          "format": "json",
+          "bytes": 81,
+          "bodyHash": "4d66bcf33f1e",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/sbdag.php?k=25&gb=1",
+          "http": 200,
+          "contentType": "text/html",
+          "format": "json",
+          "bytes": 10009,
+          "bodyHash": "0c50a5c59a62",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/sbdag.php?k=25&gb=0",
+          "http": 200,
+          "contentType": "text/html",
+          "format": "json",
+          "bytes": 10009,
+          "bodyHash": "f31563a555cf",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text"
+          ]
+        }
+      ]
+    },
+    "stwcbhdic.php": {
+      "sectionHash": "36085d3645458c3a88548a4e336302963bc87a12c428e21e3aca99bc50ef9c47",
+      "sample": {
+        "k": "1"
+      },
+      "formats": [
+        "text (text/html)",
+        "json (text/html)"
+      ],
+      "requiredCandidates": [
+        "k"
+      ],
+      "enumEffect": {
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "33800eec1da3"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "3d68d2d4f4a0"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/stwcbhdic.php",
+          "http": 500,
+          "contentType": "text/html",
+          "format": "text",
+          "bytes": 50,
+          "bodyHash": "f46b93da814a",
+          "snippet": "{\n\"status\":\"success\",\n\"record_count\":0,\n\"record\":["
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/stwcbhdic.php?k=1",
+          "http": 200,
+          "contentType": "text/html",
+          "format": "json",
+          "bytes": 8569,
+          "bodyHash": "3d68d2d4f4a0",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text"
+          ]
+        },
+        {
+          "label": "drop k",
+          "url": "https://bible.fhl.net/api/stwcbhdic.php",
+          "http": 500,
+          "contentType": "text/html",
+          "format": "text",
+          "bytes": 50,
+          "bodyHash": "f46b93da814a",
+          "snippet": "{\n\"status\":\"success\",\n\"record_count\":0,\n\"record\":["
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/stwcbhdic.php?k=1&gb=1",
+          "http": 200,
+          "contentType": "text/html",
+          "format": "json",
+          "bytes": 8569,
+          "bodyHash": "33800eec1da3",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/stwcbhdic.php?k=1&gb=0",
+          "http": 200,
+          "contentType": "text/html",
+          "format": "json",
+          "bytes": 8569,
+          "bodyHash": "3d68d2d4f4a0",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "sn",
+            "dic_text"
+          ]
+        }
+      ]
+    },
+    "qsb.php": {
+      "sectionHash": "2ee99ae55c8de38d057c2455a56cf262a8c238b444665ed3ad89f77be146e477",
+      "sample": {
+        "qstr": "約 3:16"
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [
+        "qstr"
+      ],
+      "enumEffect": {
+        "strong": [
+          {
+            "label": "無",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "edb6bbb2a87c"
+          },
+          {
+            "label": "有",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "edb6bbb2a87c"
+          }
+        ],
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "c5cb66607b50"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "edb6bbb2a87c"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [
+        "version"
+      ],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/qsb.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 62,
+          "bodyHash": "fd7664836e41",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count",
+            "proc",
+            "record"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/qsb.php?qstr=%E7%B4%84+3%3A16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 356,
+          "bodyHash": "edb6bbb2a87c",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "proc",
+            "record"
+          ],
+          "recordKeys": [
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "drop qstr",
+          "url": "https://bible.fhl.net/api/qsb.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 62,
+          "bodyHash": "fd7664836e41",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count",
+            "proc",
+            "record"
+          ]
+        },
+        {
+          "label": "strong=無",
+          "url": "https://bible.fhl.net/api/qsb.php?qstr=%E7%B4%84+3%3A16&strong=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 356,
+          "bodyHash": "edb6bbb2a87c",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "proc",
+            "record"
+          ],
+          "recordKeys": [
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "strong=有",
+          "url": "https://bible.fhl.net/api/qsb.php?qstr=%E7%B4%84+3%3A16&strong=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 356,
+          "bodyHash": "edb6bbb2a87c",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "proc",
+            "record"
+          ],
+          "recordKeys": [
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/qsb.php?qstr=%E7%B4%84+3%3A16&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 356,
+          "bodyHash": "c5cb66607b50",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "proc",
+            "record"
+          ],
+          "recordKeys": [
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/qsb.php?qstr=%E7%B4%84+3%3A16&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 356,
+          "bodyHash": "edb6bbb2a87c",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "proc",
+            "record"
+          ],
+          "recordKeys": [
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "add version=unv",
+          "url": "https://bible.fhl.net/api/qsb.php?qstr=%E7%B4%84+3%3A16&version=unv",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 362,
+          "bodyHash": "5b709309d89c",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "proc",
+            "record"
+          ],
+          "recordKeys": [
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "add bid=1",
+          "url": "https://bible.fhl.net/api/qsb.php?qstr=%E7%B4%84+3%3A16&bid=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 356,
+          "bodyHash": "edb6bbb2a87c",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "proc",
+            "record"
+          ],
+          "recordKeys": [
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        }
+      ]
+    },
+    "se.php": {
+      "sectionHash": "d3f57c0900bb9a318b31844da69648064990c7a4b2f3d11745525d2bc228fe5f",
+      "sample": {
+        "q": "愛",
+        "limit": 3
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [
+        "q",
+        "limit"
+      ],
+      "enumEffect": {
+        "orig": [
+          {
+            "label": "經文關鍵字",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "2fc602f2edfd"
+          },
+          {
+            "label": "希臘文編號",
+            "code": "1",
+            "ok": false,
+            "bodyHash": "bed3e9d8d399"
+          },
+          {
+            "label": "希伯來文編號",
+            "code": "2",
+            "ok": true,
+            "bodyHash": "46dd60ce1886"
+          }
+        ],
+        "RANGE": [
+          {
+            "label": "全部",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "2fc602f2edfd"
+          },
+          {
+            "label": "新約",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "baa3a656d92f"
+          },
+          {
+            "label": "舊約",
+            "code": "2",
+            "ok": true,
+            "bodyHash": "2fc602f2edfd"
+          },
+          {
+            "label": "範圍",
+            "code": "3",
+            "ok": true,
+            "bodyHash": "2fc602f2edfd"
+          }
+        ],
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": false,
+            "bodyHash": "ad2d5c76ac59"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "2fc602f2edfd"
+          }
+        ],
+        "count_only": [
+          {
+            "label": "是",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "e2ea125f7aa8"
+          },
+          {
+            "label": "否",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "2fc602f2edfd"
+          }
+        ],
+        "index_only": [
+          {
+            "label": "是",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "e156022c1fe2"
+          },
+          {
+            "label": "否",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "2fc602f2edfd"
+          }
+        ]
+      },
+      "caseSensitive": {
+        "VERSION": true,
+        "RANGE": true
+      },
+      "addingChangesResult": [],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/se.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 31,
+          "bodyHash": "50d13270104e",
+          "status": "Fail: Empty Query",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "drop q",
+          "url": "https://bible.fhl.net/api/se.php?limit=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 31,
+          "bodyHash": "50d13270104e",
+          "status": "Fail: Empty Query",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "drop limit",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 84,
+          "bodyHash": "985e587d8261",
+          "status": "Fail: record count > 500",
+          "record_count": 827,
+          "keys": [
+            "status",
+            "record_count",
+            "orig",
+            "key"
+          ]
+        },
+        {
+          "label": "orig=經文關鍵字",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&orig=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "orig=希臘文編號",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&orig=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 79,
+          "bodyHash": "bed3e9d8d399",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "orig=希伯來文編號",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&orig=2",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1628,
+          "bodyHash": "46dd60ce1886",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "RANGE=全部",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&RANGE=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "RANGE=新約",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&RANGE=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 789,
+          "bodyHash": "baa3a656d92f",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "RANGE=舊約",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&RANGE=2",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "RANGE=範圍",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&RANGE=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 79,
+          "bodyHash": "ad2d5c76ac59",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "count_only=是",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&count_only=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 66,
+          "bodyHash": "e2ea125f7aa8",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count"
+          ]
+        },
+        {
+          "label": "count_only=否",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&count_only=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "index_only=是",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&index_only=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 290,
+          "bodyHash": "e156022c1fe2",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec"
+          ]
+        },
+        {
+          "label": "index_only=否",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&index_only=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "case VERSION",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&VERSION=kjv",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 79,
+          "bodyHash": "ad2d5c76ac59",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "case version",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&version=kjv",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "case RANGE",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&RANGE=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 789,
+          "bodyHash": "baa3a656d92f",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "case range",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&range=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "add VERSION=unv",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&VERSION=unv",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "add range_bid=1",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&range_bid=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "add range_eid=1",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&range_eid=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "add offset=0",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&limit=3&offset=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1334,
+          "bodyHash": "2fc602f2edfd",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "range 3 John only",
+          "url": "https://bible.fhl.net/api/se.php?q=%E6%84%9B&RANGE=3&range_bid=43&range_eid=43&limit=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 873,
+          "bodyHash": "62d105583e3f",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "greek number",
+          "url": "https://bible.fhl.net/api/se.php?q=25&orig=1&limit=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1235,
+          "bodyHash": "36f61f1e4984",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        }
+      ]
+    },
+    "ob.php": {
+      "sectionHash": "9472c32200f26f1929438a47f88737b1a7f84c96f4ea468e4b176b41772af1f8",
+      "sample": {},
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [],
+      "enumEffect": {
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "23f7a08926c6"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "bcbb6c3edd98"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [
+        "id"
+      ],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/ob.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 359655,
+          "bodyHash": "bcbb6c3edd98",
+          "status": "success",
+          "record_count": 463,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "div",
+            "age",
+            "agec",
+            "title",
+            "author",
+            "lang",
+            "style",
+            "procb",
+            "intro",
+            "copyright",
+            "provider",
+            "remark"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/ob.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 359655,
+          "bodyHash": "bcbb6c3edd98",
+          "status": "success",
+          "record_count": 463,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "div",
+            "age",
+            "agec",
+            "title",
+            "author",
+            "lang",
+            "style",
+            "procb",
+            "intro",
+            "copyright",
+            "provider",
+            "remark"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/ob.php?gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 359655,
+          "bodyHash": "23f7a08926c6",
+          "status": "success",
+          "record_count": 463,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "div",
+            "age",
+            "agec",
+            "title",
+            "author",
+            "lang",
+            "style",
+            "procb",
+            "intro",
+            "copyright",
+            "provider",
+            "remark"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/ob.php?gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 359655,
+          "bodyHash": "bcbb6c3edd98",
+          "status": "success",
+          "record_count": 463,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "div",
+            "age",
+            "agec",
+            "title",
+            "author",
+            "lang",
+            "style",
+            "procb",
+            "intro",
+            "copyright",
+            "provider",
+            "remark"
+          ]
+        },
+        {
+          "label": "add id=1",
+          "url": "https://bible.fhl.net/api/ob.php?id=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 2061,
+          "bodyHash": "7857b55f0f6f",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "div",
+            "age",
+            "agec",
+            "title",
+            "author",
+            "lang",
+            "style",
+            "procb",
+            "intro",
+            "copyright",
+            "provider",
+            "remark"
+          ]
+        }
+      ]
+    },
+    "sob.php": {
+      "sectionHash": "c7fc10a601cff6364769f8fed05ac0098a4c22cc21f5b687f1c6f874bb5d8639",
+      "sample": {
+        "book": "all",
+        "bid": 43,
+        "chap": 3,
+        "sec": 16
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [
+        "bid"
+      ],
+      "enumEffect": {
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "af8a231e5469"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "b031096ba5af"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [
+        "page"
+      ],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/sob.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 18,
+          "bodyHash": "2b886bc49703",
+          "status": "Fail:",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/sob.php?book=all&bid=43&chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 27134,
+          "bodyHash": "b031096ba5af",
+          "status": "success",
+          "keys": [
+            "status",
+            "mode",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "engs",
+            "vid",
+            "chap",
+            "sec",
+            "name"
+          ]
+        },
+        {
+          "label": "drop book",
+          "url": "https://bible.fhl.net/api/sob.php?bid=43&chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 42,
+          "bodyHash": "c60599dd0363",
+          "status": "success",
+          "keys": [
+            "status",
+            "mode",
+            "record"
+          ]
+        },
+        {
+          "label": "drop bid",
+          "url": "https://bible.fhl.net/api/sob.php?book=all&chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 18,
+          "bodyHash": "2b886bc49703",
+          "status": "Fail:",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "drop chap",
+          "url": "https://bible.fhl.net/api/sob.php?book=all&bid=43&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 27134,
+          "bodyHash": "014b27713c8a",
+          "status": "success",
+          "keys": [
+            "status",
+            "mode",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "engs",
+            "vid",
+            "chap",
+            "sec",
+            "name"
+          ]
+        },
+        {
+          "label": "drop sec",
+          "url": "https://bible.fhl.net/api/sob.php?book=all&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 26908,
+          "bodyHash": "d87d43de874c",
+          "status": "success",
+          "keys": [
+            "status",
+            "mode",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "engs",
+            "vid",
+            "chap",
+            "sec",
+            "name"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/sob.php?book=all&bid=43&chap=3&sec=16&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 27134,
+          "bodyHash": "af8a231e5469",
+          "status": "success",
+          "keys": [
+            "status",
+            "mode",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "engs",
+            "vid",
+            "chap",
+            "sec",
+            "name"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/sob.php?book=all&bid=43&chap=3&sec=16&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 27134,
+          "bodyHash": "b031096ba5af",
+          "status": "success",
+          "keys": [
+            "status",
+            "mode",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "engs",
+            "vid",
+            "chap",
+            "sec",
+            "name"
+          ]
+        },
+        {
+          "label": "add engs=1",
+          "url": "https://bible.fhl.net/api/sob.php?book=all&bid=43&chap=3&sec=16&engs=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 27134,
+          "bodyHash": "b031096ba5af",
+          "status": "success",
+          "keys": [
+            "status",
+            "mode",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "engs",
+            "vid",
+            "chap",
+            "sec",
+            "name"
+          ]
+        },
+        {
+          "label": "add page=1",
+          "url": "https://bible.fhl.net/api/sob.php?book=all&bid=43&chap=3&sec=16&page=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 33059,
+          "bodyHash": "a3b8f2f8665b",
+          "status": "success",
+          "keys": [
+            "status",
+            "mode",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "engs",
+            "vid",
+            "chap",
+            "sec",
+            "name"
+          ]
+        },
+        {
+          "label": "engs instead of bid",
+          "url": "https://bible.fhl.net/api/sob.php?book=all&engs=John&chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 27134,
+          "bodyHash": "b031096ba5af",
+          "status": "success",
+          "keys": [
+            "status",
+            "mode",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "engs",
+            "vid",
+            "chap",
+            "sec",
+            "name"
+          ]
+        },
+        {
+          "label": "bid + conflicting engs",
+          "url": "https://bible.fhl.net/api/sob.php?book=all&bid=43&engs=Gen&chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 27134,
+          "bodyHash": "b031096ba5af",
+          "status": "success",
+          "keys": [
+            "status",
+            "mode",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "engs",
+            "vid",
+            "chap",
+            "sec",
+            "name"
+          ]
+        },
+        {
+          "label": "mode 0 book 1",
+          "url": "https://bible.fhl.net/api/sob.php?book=1&bid=43&chap=3&sec=16",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 42,
+          "bodyHash": "c60599dd0363",
+          "status": "success",
+          "keys": [
+            "status",
+            "mode",
+            "record"
+          ]
+        }
+      ]
+    },
+    "sobj.php": {
+      "sectionHash": "51e181e2ccdb457aab053b8e6da566ba2f62a75997ff875b851519a66bc8c016",
+      "sample": {
+        "engs": "John",
+        "chap": 2,
+        "sec": 1
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [
+        "engs",
+        "chap"
+      ],
+      "enumEffect": {
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "82dc591ccfdb"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "82dc591ccfdb"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/sobj.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 52,
+          "bodyHash": "82781d8ef372",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/sobj.php?engs=John&chap=2&sec=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 11611,
+          "bodyHash": "82dc591ccfdb",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "ename",
+            "mname",
+            "cname",
+            "c1name",
+            "c2name",
+            "hsnum",
+            "gsnum",
+            "otype",
+            "objpath",
+            "other",
+            "remark",
+            "exp5",
+            "is_site",
+            "related",
+            "has_collect"
+          ]
+        },
+        {
+          "label": "drop engs",
+          "url": "https://bible.fhl.net/api/sobj.php?chap=2&sec=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 52,
+          "bodyHash": "82781d8ef372",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "drop chap",
+          "url": "https://bible.fhl.net/api/sobj.php?engs=John&sec=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 52,
+          "bodyHash": "82781d8ef372",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "drop sec",
+          "url": "https://bible.fhl.net/api/sobj.php?engs=John&chap=2",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 17552,
+          "bodyHash": "8d62dd340f9b",
+          "status": "success",
+          "record_count": 12,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "ename",
+            "mname",
+            "cname",
+            "c1name",
+            "c2name",
+            "hsnum",
+            "gsnum",
+            "otype",
+            "objpath",
+            "other",
+            "remark",
+            "exp5",
+            "is_site",
+            "related",
+            "has_collect"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/sobj.php?engs=John&chap=2&sec=1&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 11611,
+          "bodyHash": "82dc591ccfdb",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "ename",
+            "mname",
+            "cname",
+            "c1name",
+            "c2name",
+            "hsnum",
+            "gsnum",
+            "otype",
+            "objpath",
+            "other",
+            "remark",
+            "exp5",
+            "is_site",
+            "related",
+            "has_collect"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/sobj.php?engs=John&chap=2&sec=1&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 11611,
+          "bodyHash": "82dc591ccfdb",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "ename",
+            "mname",
+            "cname",
+            "c1name",
+            "c2name",
+            "hsnum",
+            "gsnum",
+            "otype",
+            "objpath",
+            "other",
+            "remark",
+            "exp5",
+            "is_site",
+            "related",
+            "has_collect"
+          ]
+        }
+      ]
+    },
+    "st.php": {
+      "sectionHash": "35f9060bc1e3febb1bf32ecfae3f7aea7442ede295b12c2881e8f40a916a4d17",
+      "sample": {
+        "N": 4,
+        "keyword": "愛"
+      },
+      "formats": [
+        "text (application/json; charset=utf-8)",
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [
+        "N"
+      ],
+      "enumEffect": {
+        "N": [
+          {
+            "label": "全部查詢",
+            "code": "4",
+            "ok": true,
+            "bodyHash": "eed4de4c28d5"
+          },
+          {
+            "label": "torrey英文",
+            "code": "0",
+            "ok": false,
+            "bodyHash": "618fdb349381"
+          },
+          {
+            "label": "naves英文",
+            "code": "1",
+            "ok": false,
+            "bodyHash": "72d9a246b751"
+          },
+          {
+            "label": "torrey中譯",
+            "code": "2",
+            "ok": true,
+            "bodyHash": "e87d71f053f4"
+          },
+          {
+            "label": "naves中譯",
+            "code": "3",
+            "ok": true,
+            "bodyHash": "592f519a1b8e"
+          }
+        ],
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "b4d65bbbf6a8"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "eed4de4c28d5"
+          }
+        ],
+        "count_only": [
+          {
+            "label": "是",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "dea5e4250693"
+          },
+          {
+            "label": "否",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "eed4de4c28d5"
+          }
+        ]
+      },
+      "caseSensitive": {
+        "N": true
+      },
+      "addingChangesResult": [
+        "k"
+      ],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/st.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "text",
+          "bytes": 40536,
+          "bodyHash": "0ee02a58db69",
+          "snippet": "{\n\"status\":\"success\",\n\"N\":0,\"k\":0,\"keyword\":null,\n\"record_count\":629,\n\"record\":[{\"book\":,\n\"id\":\"T0000628\",\n\"topic\":\"Zebulun, The Tribe of\",\n\"text\":\"0\"},{\"book\":"
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/st.php?N=4&keyword=%E6%84%9B",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36364,
+          "bodyHash": "eed4de4c28d5",
+          "status": "success",
+          "record_count": 23,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "id",
+            "topic",
+            "text"
+          ]
+        },
+        {
+          "label": "drop N",
+          "url": "https://bible.fhl.net/api/st.php?keyword=%E6%84%9B",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 84,
+          "bodyHash": "618fdb349381",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "drop keyword",
+          "url": "https://bible.fhl.net/api/st.php?N=4",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "text",
+          "bytes": 415967,
+          "bodyHash": "1f9e7cffa293",
+          "snippet": "{\n\"status\":\"success\",\n\"N\":4,\"k\":0,\"keyword\":null,\n\"record_count\":5952,\n\"record\":[{\"book\":,\n\"id\":\"T0001946\",\n\"topic\":\"\\u5132\\u5165\\u7a40\\u5009\\/\\u8caf\\u85cf\",\n\"t"
+        },
+        {
+          "label": "N=全部查詢",
+          "url": "https://bible.fhl.net/api/st.php?N=4&keyword=%E6%84%9B",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36364,
+          "bodyHash": "eed4de4c28d5",
+          "status": "success",
+          "record_count": 23,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "id",
+            "topic",
+            "text"
+          ]
+        },
+        {
+          "label": "N=torrey英文",
+          "url": "https://bible.fhl.net/api/st.php?N=0&keyword=%E6%84%9B",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 84,
+          "bodyHash": "618fdb349381",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "N=naves英文",
+          "url": "https://bible.fhl.net/api/st.php?N=1&keyword=%E6%84%9B",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 84,
+          "bodyHash": "72d9a246b751",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "N=torrey中譯",
+          "url": "https://bible.fhl.net/api/st.php?N=2&keyword=%E6%84%9B",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 22654,
+          "bodyHash": "e87d71f053f4",
+          "status": "success",
+          "record_count": 9,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "id",
+            "topic",
+            "text"
+          ]
+        },
+        {
+          "label": "N=naves中譯",
+          "url": "https://bible.fhl.net/api/st.php?N=3&keyword=%E6%84%9B",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 13793,
+          "bodyHash": "592f519a1b8e",
+          "status": "success",
+          "record_count": 14,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "id",
+            "topic",
+            "text"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/st.php?N=4&keyword=%E6%84%9B&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 911,
+          "bodyHash": "b4d65bbbf6a8",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "id",
+            "topic",
+            "text"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/st.php?N=4&keyword=%E6%84%9B&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36364,
+          "bodyHash": "eed4de4c28d5",
+          "status": "success",
+          "record_count": 23,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "id",
+            "topic",
+            "text"
+          ]
+        },
+        {
+          "label": "count_only=是",
+          "url": "https://bible.fhl.net/api/st.php?N=4&keyword=%E6%84%9B&count_only=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 73,
+          "bodyHash": "dea5e4250693",
+          "status": "success",
+          "record_count": 23,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count"
+          ]
+        },
+        {
+          "label": "count_only=否",
+          "url": "https://bible.fhl.net/api/st.php?N=4&keyword=%E6%84%9B&count_only=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36364,
+          "bodyHash": "eed4de4c28d5",
+          "status": "success",
+          "record_count": 23,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "id",
+            "topic",
+            "text"
+          ]
+        },
+        {
+          "label": "case N",
+          "url": "https://bible.fhl.net/api/st.php?N=0&keyword=%E6%84%9B",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 84,
+          "bodyHash": "618fdb349381",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "case n",
+          "url": "https://bible.fhl.net/api/st.php?N=4&keyword=%E6%84%9B&n=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36364,
+          "bodyHash": "eed4de4c28d5",
+          "status": "success",
+          "record_count": 23,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "id",
+            "topic",
+            "text"
+          ]
+        },
+        {
+          "label": "add k=1",
+          "url": "https://bible.fhl.net/api/st.php?N=4&keyword=%E6%84%9B&k=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 8183,
+          "bodyHash": "3f21fe74bb80",
+          "status": "success",
+          "record_count": 4,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "id",
+            "topic",
+            "text"
+          ]
+        },
+        {
+          "label": "k only",
+          "url": "https://bible.fhl.net/api/st.php?N=4&k=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 8179,
+          "bodyHash": "7afa193ee2d2",
+          "status": "success",
+          "record_count": 4,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "id",
+            "topic",
+            "text"
+          ]
+        },
+        {
+          "label": "k + keyword",
+          "url": "https://bible.fhl.net/api/st.php?N=4&k=1&keyword=%E6%84%9B",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 8183,
+          "bodyHash": "3f21fe74bb80",
+          "status": "success",
+          "record_count": 4,
+          "keys": [
+            "status",
+            "N",
+            "k",
+            "keyword",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "book",
+            "id",
+            "topic",
+            "text"
+          ]
+        }
+      ]
+    },
+    "au.php": {
+      "sectionHash": "3eddf8fc3360add241047048636634f136e07a5a12d34efe610fea50d3892f96",
+      "sample": {
+        "version": 0,
+        "bid": 43,
+        "chap": 3
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [],
+      "enumEffect": {
+        "version": [
+          {
+            "label": "和合本",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "32b80458a7e9"
+          },
+          {
+            "label": "台語",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "283d28b85bf4"
+          },
+          {
+            "label": "客家話",
+            "code": "2",
+            "ok": true,
+            "bodyHash": "a8a21c882a2c"
+          },
+          {
+            "label": "廣東話",
+            "code": "3",
+            "ok": true,
+            "bodyHash": "6b5513f6ee0d"
+          },
+          {
+            "label": "現代中文譯本",
+            "code": "4",
+            "ok": true,
+            "bodyHash": "44d47600cf31"
+          },
+          {
+            "label": "台語新約",
+            "code": "5",
+            "ok": true,
+            "bodyHash": "f8190b7dc9d2"
+          },
+          {
+            "label": "紅皮聖經",
+            "code": "6",
+            "ok": true,
+            "bodyHash": "d9a9824a557b"
+          },
+          {
+            "label": "希伯來文",
+            "code": "7",
+            "ok": true,
+            "bodyHash": "4c513ce55076"
+          },
+          {
+            "label": "福州話",
+            "code": "8",
+            "ok": true,
+            "bodyHash": "901212beec12"
+          },
+          {
+            "label": "希臘文",
+            "code": "9",
+            "ok": true,
+            "bodyHash": "bb23a0fe0ddb"
+          },
+          {
+            "label": "spring台語",
+            "code": "10",
+            "ok": true,
+            "bodyHash": "1e78dc6c39d2"
+          },
+          {
+            "label": "spring和合本",
+            "code": "11",
+            "ok": true,
+            "bodyHash": "4ae43f4bbed4"
+          },
+          {
+            "label": "NetBible中文版",
+            "code": "12",
+            "ok": true,
+            "bodyHash": "26adcd4f7405"
+          },
+          {
+            "label": "全民台語聖經",
+            "code": "13",
+            "ok": true,
+            "bodyHash": "16b7eb46272c"
+          },
+          {
+            "label": "鄒語",
+            "code": "14",
+            "ok": true,
+            "bodyHash": "10e2b90d565b"
+          },
+          {
+            "label": "台語南部腔",
+            "code": "15",
+            "ok": true,
+            "bodyHash": "e7114b233b20"
+          },
+          {
+            "label": "現代台語譯本",
+            "code": "17",
+            "ok": true,
+            "bodyHash": "5de07929eb58"
+          },
+          {
+            "label": "現代客語譯本",
+            "code": "18",
+            "ok": true,
+            "bodyHash": "fe4a614fe316"
+          },
+          {
+            "label": "達悟語",
+            "code": "19",
+            "ok": true,
+            "bodyHash": "e0b09c712549"
+          }
+        ],
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "3550e6537aad"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "32b80458a7e9"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/au.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 242,
+          "bodyHash": "d44a5b0008f7",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/au.php?version=0&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 260,
+          "bodyHash": "32b80458a7e9",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "drop version",
+          "url": "https://bible.fhl.net/api/au.php?bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 260,
+          "bodyHash": "32b80458a7e9",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "drop bid",
+          "url": "https://bible.fhl.net/api/au.php?version=0&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 241,
+          "bodyHash": "8ec279302a9a",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "drop chap",
+          "url": "https://bible.fhl.net/api/au.php?version=0&bid=43",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 261,
+          "bodyHash": "6217ad99e01d",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=和合本",
+          "url": "https://bible.fhl.net/api/au.php?version=0&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 260,
+          "bodyHash": "32b80458a7e9",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=台語",
+          "url": "https://bible.fhl.net/api/au.php?version=1&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 272,
+          "bodyHash": "283d28b85bf4",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=客家話",
+          "url": "https://bible.fhl.net/api/au.php?version=2&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 270,
+          "bodyHash": "a8a21c882a2c",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=廣東話",
+          "url": "https://bible.fhl.net/api/au.php?version=3&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 272,
+          "bodyHash": "6b5513f6ee0d",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=現代中文譯本",
+          "url": "https://bible.fhl.net/api/au.php?version=4&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 261,
+          "bodyHash": "44d47600cf31",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=台語新約",
+          "url": "https://bible.fhl.net/api/au.php?version=5&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 273,
+          "bodyHash": "f8190b7dc9d2",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=紅皮聖經",
+          "url": "https://bible.fhl.net/api/au.php?version=6&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 261,
+          "bodyHash": "d9a9824a557b",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=希伯來文",
+          "url": "https://bible.fhl.net/api/au.php?version=7&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 265,
+          "bodyHash": "4c513ce55076",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=福州話",
+          "url": "https://bible.fhl.net/api/au.php?version=8&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 256,
+          "bodyHash": "901212beec12",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=希臘文",
+          "url": "https://bible.fhl.net/api/au.php?version=9&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 262,
+          "bodyHash": "bb23a0fe0ddb",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=spring台語",
+          "url": "https://bible.fhl.net/api/au.php?version=10&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 275,
+          "bodyHash": "1e78dc6c39d2",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=spring和合本",
+          "url": "https://bible.fhl.net/api/au.php?version=11&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 276,
+          "bodyHash": "4ae43f4bbed4",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=NetBible中文版",
+          "url": "https://bible.fhl.net/api/au.php?version=12&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 276,
+          "bodyHash": "26adcd4f7405",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=全民台語聖經",
+          "url": "https://bible.fhl.net/api/au.php?version=13&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 261,
+          "bodyHash": "16b7eb46272c",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=鄒語",
+          "url": "https://bible.fhl.net/api/au.php?version=14&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 257,
+          "bodyHash": "10e2b90d565b",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=台語南部腔",
+          "url": "https://bible.fhl.net/api/au.php?version=15&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 264,
+          "bodyHash": "e7114b233b20",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=現代台語譯本",
+          "url": "https://bible.fhl.net/api/au.php?version=17&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 261,
+          "bodyHash": "5de07929eb58",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=現代客語譯本",
+          "url": "https://bible.fhl.net/api/au.php?version=18&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 261,
+          "bodyHash": "fe4a614fe316",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=達悟語",
+          "url": "https://bible.fhl.net/api/au.php?version=19&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 264,
+          "bodyHash": "e0b09c712549",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/au.php?version=0&bid=43&chap=3&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 260,
+          "bodyHash": "3550e6537aad",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/au.php?version=0&bid=43&chap=3&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 260,
+          "bodyHash": "32b80458a7e9",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "nbid",
+            "pbid"
+          ]
+        }
+      ]
+    },
+    "aump4.php": {
+      "sectionHash": "04723a8708c8db8a4c2c8e057fbed604bb3f594b3a2bbd61e257e3c49f01e67b",
+      "sample": {
+        "version": 17,
+        "bid": 43,
+        "chap": 3
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [],
+      "enumEffect": {
+        "version": [
+          {
+            "label": "現代台語譯本",
+            "code": "17",
+            "ok": true,
+            "bodyHash": "80bf400764d8"
+          }
+        ],
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "4c45a9b35dfc"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "80bf400764d8"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/aump4.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 289,
+          "bodyHash": "1d3e82aabb6e",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "mp4",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/aump4.php?version=17&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 309,
+          "bodyHash": "80bf400764d8",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "mp4",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "drop version",
+          "url": "https://bible.fhl.net/api/aump4.php?bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 309,
+          "bodyHash": "4affad71b678",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "mp4",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "drop bid",
+          "url": "https://bible.fhl.net/api/aump4.php?version=17&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 288,
+          "bodyHash": "7c8939ac9f79",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "mp4",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "drop chap",
+          "url": "https://bible.fhl.net/api/aump4.php?version=17&bid=43",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 310,
+          "bodyHash": "9c93d900b727",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "mp4",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "version=現代台語譯本",
+          "url": "https://bible.fhl.net/api/aump4.php?version=17&bid=43&chap=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 309,
+          "bodyHash": "80bf400764d8",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "mp4",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/aump4.php?version=17&bid=43&chap=3&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 309,
+          "bodyHash": "4c45a9b35dfc",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "mp4",
+            "nbid",
+            "pbid"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/aump4.php?version=17&bid=43&chap=3&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 309,
+          "bodyHash": "80bf400764d8",
+          "status": "success",
+          "keys": [
+            "status",
+            "name",
+            "chinesef",
+            "engf",
+            "chap",
+            "pchinesef",
+            "pchap",
+            "nchinesef",
+            "nchap",
+            "ogg",
+            "mp3",
+            "mp4",
+            "nbid",
+            "pbid"
+          ]
+        }
+      ]
+    },
+    "qsub.php": {
+      "sectionHash": "e4649a67ad50a78311b3865b99fecdf54993f306ae7b0ebba633cf9c7b705ca2",
+      "sample": {
+        "bid": 101,
+        "chap": 1
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [],
+      "enumEffect": {
+        "strong": [
+          {
+            "label": "要",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "bdf0cb35a004"
+          },
+          {
+            "label": "不要",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "bdf0cb35a004"
+          }
+        ],
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "da7d622d593f"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "bdf0cb35a004"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [
+        "sec",
+        "version"
+      ],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/qsub.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 17344,
+          "bodyHash": "bdf0cb35a004",
+          "status": "success",
+          "record_count": 63,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/qsub.php?bid=101&chap=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 17344,
+          "bodyHash": "bdf0cb35a004",
+          "status": "success",
+          "record_count": 63,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "drop bid",
+          "url": "https://bible.fhl.net/api/qsub.php?chap=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 17344,
+          "bodyHash": "bdf0cb35a004",
+          "status": "success",
+          "record_count": 63,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "drop chap",
+          "url": "https://bible.fhl.net/api/qsub.php?bid=101",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 17344,
+          "bodyHash": "bdf0cb35a004",
+          "status": "success",
+          "record_count": 63,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "strong=要",
+          "url": "https://bible.fhl.net/api/qsub.php?bid=101&chap=1&strong=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 17344,
+          "bodyHash": "bdf0cb35a004",
+          "status": "success",
+          "record_count": 63,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "strong=不要",
+          "url": "https://bible.fhl.net/api/qsub.php?bid=101&chap=1&strong=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 17344,
+          "bodyHash": "bdf0cb35a004",
+          "status": "success",
+          "record_count": 63,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/qsub.php?bid=101&chap=1&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 17344,
+          "bodyHash": "da7d622d593f",
+          "status": "success",
+          "record_count": 63,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/qsub.php?bid=101&chap=1&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 17344,
+          "bodyHash": "bdf0cb35a004",
+          "status": "success",
+          "record_count": 63,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "add sec=1",
+          "url": "https://bible.fhl.net/api/qsub.php?bid=101&chap=1&sec=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 596,
+          "bodyHash": "6b2248d2a749",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "add version=nstrunv",
+          "url": "https://bible.fhl.net/api/qsub.php?bid=101&chap=1&version=nstrunv",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 98,
+          "bodyHash": "9e8dba2e3270",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record"
+          ]
+        },
+        {
+          "label": "sec range 1-3",
+          "url": "https://bible.fhl.net/api/qsub.php?bid=101&chap=1&sec=1-3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1250,
+          "bodyHash": "54a0f8feed6c",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        }
+      ]
+    },
+    "qaf.php": {
+      "sectionHash": "15019640ca09a5e393d7afda393bf2941d5108d4c8315868e1e0e6a8e70357ca",
+      "sample": {
+        "bid": 201,
+        "chap": 1
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [],
+      "enumEffect": {
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "2e4b163ea453"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "ba9a76991978"
+          }
+        ]
+      },
+      "caseSensitive": {},
+      "addingChangesResult": [
+        "sec"
+      ],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/qaf.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 2862,
+          "bodyHash": "ba9a76991978",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/qaf.php?bid=201&chap=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 2862,
+          "bodyHash": "ba9a76991978",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "drop bid",
+          "url": "https://bible.fhl.net/api/qaf.php?chap=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 2862,
+          "bodyHash": "ba9a76991978",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "drop chap",
+          "url": "https://bible.fhl.net/api/qaf.php?bid=201",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 2862,
+          "bodyHash": "ba9a76991978",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/qaf.php?bid=201&chap=1&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 2862,
+          "bodyHash": "2e4b163ea453",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/qaf.php?bid=201&chap=1&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 2862,
+          "bodyHash": "ba9a76991978",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "add chineses=革利免一書",
+          "url": "https://bible.fhl.net/api/qaf.php?bid=201&chap=1&chineses=%E9%9D%A9%E5%88%A9%E5%85%8D%E4%B8%80%E6%9B%B8",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 2862,
+          "bodyHash": "ba9a76991978",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "add sec=1",
+          "url": "https://bible.fhl.net/api/qaf.php?bid=201&chap=1&sec=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 1280,
+          "bodyHash": "a5f24bbe2a8b",
+          "status": "success",
+          "record_count": 1,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "sec range 1-3",
+          "url": "https://bible.fhl.net/api/qaf.php?bid=201&chap=1&sec=1-3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 2862,
+          "bodyHash": "ba9a76991978",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "chineses default only",
+          "url": "https://bible.fhl.net/api/qaf.php?chap=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 2862,
+          "bodyHash": "ba9a76991978",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "record_count",
+            "v_name",
+            "version",
+            "proc",
+            "record",
+            "prev",
+            "next"
+          ],
+          "recordKeys": [
+            "engs",
+            "bid",
+            "chineses",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        }
+      ]
+    },
+    "sesub.php": {
+      "sectionHash": "2938c431f157916105d8eadd6f24e9f281643fe136d72e94e7ccc9e5c36374cd",
+      "sample": {
+        "q": "主",
+        "limit": 3
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)",
+        "xml (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [
+        "q",
+        "limit"
+      ],
+      "enumEffect": {
+        "orig": [
+          {
+            "label": "經文關鍵字",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "5baefe46eb2e"
+          }
+        ],
+        "RANGE": [
+          {
+            "label": "全部",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "5baefe46eb2e"
+          },
+          {
+            "label": "範圍",
+            "code": "3",
+            "ok": false,
+            "bodyHash": "64182a143bff"
+          }
+        ],
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "8e766f782bc4"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "5baefe46eb2e"
+          }
+        ],
+        "count_only": [
+          {
+            "label": "是",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "ed7da8459720"
+          },
+          {
+            "label": "否",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "5baefe46eb2e"
+          }
+        ],
+        "index_only": [
+          {
+            "label": "是",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "08dd63fe9e4f"
+          },
+          {
+            "label": "否",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "5baefe46eb2e"
+          }
+        ]
+      },
+      "caseSensitive": {
+        "VERSION": true,
+        "RANGE": true
+      },
+      "addingChangesResult": [
+        "range_bid",
+        "range_eid"
+      ],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/sesub.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 31,
+          "bodyHash": "50d13270104e",
+          "status": "Fail: Empty Query",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 950,
+          "bodyHash": "5baefe46eb2e",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "drop q",
+          "url": "https://bible.fhl.net/api/sesub.php?limit=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 31,
+          "bodyHash": "50d13270104e",
+          "status": "Fail: Empty Query",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "drop limit",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 84,
+          "bodyHash": "e385cb979a62",
+          "status": "Fail: record count > 500",
+          "record_count": 859,
+          "keys": [
+            "status",
+            "record_count",
+            "orig",
+            "key"
+          ]
+        },
+        {
+          "label": "orig=經文關鍵字",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&orig=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 950,
+          "bodyHash": "5baefe46eb2e",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "RANGE=全部",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&RANGE=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 950,
+          "bodyHash": "5baefe46eb2e",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "RANGE=範圍",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&RANGE=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 79,
+          "bodyHash": "64182a143bff",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 950,
+          "bodyHash": "8e766f782bc4",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 950,
+          "bodyHash": "5baefe46eb2e",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "count_only=是",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&count_only=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 66,
+          "bodyHash": "ed7da8459720",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count"
+          ]
+        },
+        {
+          "label": "count_only=否",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&count_only=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 950,
+          "bodyHash": "5baefe46eb2e",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "index_only=是",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&index_only=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 320,
+          "bodyHash": "08dd63fe9e4f",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec"
+          ]
+        },
+        {
+          "label": "index_only=否",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&index_only=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 950,
+          "bodyHash": "5baefe46eb2e",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "case VERSION",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&VERSION=kjv",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "xml",
+          "bytes": 53,
+          "bodyHash": "6b83ffadccbc",
+          "snippet": "<result><status>Fail:kjv not found!</status></result>"
+        },
+        {
+          "label": "case version",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&version=kjv",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 950,
+          "bodyHash": "5baefe46eb2e",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "case RANGE",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&RANGE=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 79,
+          "bodyHash": "64182a143bff",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "case range",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&range=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 950,
+          "bodyHash": "5baefe46eb2e",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "add VERSION=c1933",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&VERSION=c1933",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 950,
+          "bodyHash": "5baefe46eb2e",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "add range_bid=1",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&range_bid=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 79,
+          "bodyHash": "64182a143bff",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "add range_eid=1",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&range_eid=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 79,
+          "bodyHash": "64182a143bff",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "add offset=0",
+          "url": "https://bible.fhl.net/api/sesub.php?q=%E4%B8%BB&limit=3&offset=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 950,
+          "bodyHash": "5baefe46eb2e",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        }
+      ]
+    },
+    "seaf.php": {
+      "sectionHash": "40e5134109515e69cfdfb15b0eebdb8eeb7b8e544afb20d90b5b9638936d9c05",
+      "sample": {
+        "q": "主",
+        "limit": 3
+      },
+      "formats": [
+        "json (application/json; charset=utf-8)"
+      ],
+      "requiredCandidates": [
+        "q",
+        "limit"
+      ],
+      "enumEffect": {
+        "orig": [
+          {
+            "label": "經文關鍵字",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "46d4488c7305"
+          }
+        ],
+        "RANGE": [
+          {
+            "label": "全部",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "46d4488c7305"
+          },
+          {
+            "label": "範圍",
+            "code": "3",
+            "ok": false,
+            "bodyHash": "64182a143bff"
+          }
+        ],
+        "gb": [
+          {
+            "label": "簡體",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "66363a8e5f0f"
+          },
+          {
+            "label": "正體",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "46d4488c7305"
+          }
+        ],
+        "count_only": [
+          {
+            "label": "是",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "ed7da8459720"
+          },
+          {
+            "label": "否",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "46d4488c7305"
+          }
+        ],
+        "index_only": [
+          {
+            "label": "是",
+            "code": "1",
+            "ok": true,
+            "bodyHash": "cafb754a2a35"
+          },
+          {
+            "label": "否",
+            "code": "0",
+            "ok": true,
+            "bodyHash": "46d4488c7305"
+          }
+        ]
+      },
+      "caseSensitive": {
+        "RANGE": true
+      },
+      "addingChangesResult": [
+        "range_bid",
+        "range_eid"
+      ],
+      "observations": [
+        {
+          "label": "no args",
+          "url": "https://bible.fhl.net/api/seaf.php",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 31,
+          "bodyHash": "50d13270104e",
+          "status": "Fail: Empty Query",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "sample",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36971,
+          "bodyHash": "46d4488c7305",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "drop q",
+          "url": "https://bible.fhl.net/api/seaf.php?limit=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 31,
+          "bodyHash": "50d13270104e",
+          "status": "Fail: Empty Query",
+          "keys": [
+            "status"
+          ]
+        },
+        {
+          "label": "drop limit",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 84,
+          "bodyHash": "ac929608005e",
+          "status": "Fail: record count > 500",
+          "record_count": 556,
+          "keys": [
+            "status",
+            "record_count",
+            "orig",
+            "key"
+          ]
+        },
+        {
+          "label": "orig=經文關鍵字",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&orig=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36971,
+          "bodyHash": "46d4488c7305",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "RANGE=全部",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&RANGE=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36971,
+          "bodyHash": "46d4488c7305",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "RANGE=範圍",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&RANGE=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 79,
+          "bodyHash": "64182a143bff",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "gb=簡體",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&gb=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36971,
+          "bodyHash": "66363a8e5f0f",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "gb=正體",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&gb=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36971,
+          "bodyHash": "46d4488c7305",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "count_only=是",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&count_only=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 66,
+          "bodyHash": "ed7da8459720",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count"
+          ]
+        },
+        {
+          "label": "count_only=否",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&count_only=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36971,
+          "bodyHash": "46d4488c7305",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "index_only=是",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&index_only=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 376,
+          "bodyHash": "cafb754a2a35",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec"
+          ]
+        },
+        {
+          "label": "index_only=否",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&index_only=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36971,
+          "bodyHash": "46d4488c7305",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "case RANGE",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&RANGE=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 79,
+          "bodyHash": "64182a143bff",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "case range",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&range=3",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36971,
+          "bodyHash": "46d4488c7305",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        },
+        {
+          "label": "add range_bid=1",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&range_bid=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 79,
+          "bodyHash": "64182a143bff",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "add range_eid=1",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&range_eid=1",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 79,
+          "bodyHash": "64182a143bff",
+          "status": "success",
+          "record_count": 0,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ]
+        },
+        {
+          "label": "add offset=0",
+          "url": "https://bible.fhl.net/api/seaf.php?q=%E4%B8%BB&limit=3&offset=0",
+          "http": 200,
+          "contentType": "application/json; charset=utf-8",
+          "format": "json",
+          "bytes": 36971,
+          "bodyHash": "46d4488c7305",
+          "status": "success",
+          "record_count": 3,
+          "keys": [
+            "status",
+            "orig",
+            "key",
+            "record_count",
+            "record"
+          ],
+          "recordKeys": [
+            "id",
+            "chineses",
+            "bid",
+            "engs",
+            "chap",
+            "sec",
+            "bible_text"
+          ]
+        }
+      ]
+    }
+  }
+}

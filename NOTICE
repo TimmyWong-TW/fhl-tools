@@ -1,0 +1,22 @@
+FHL Bible Tools (fhl-tools)
+Copyright (C) 2026 Timmy Wong Co. (添美網事業)
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU Affero General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option) any
+later version. See LICENSE.
+
+If you run a modified version of this program as a network service (for
+example a hosted MCP or UTCP server), the AGPL requires you to offer its
+complete source code to the users of that service.
+
+Alternative licensing: if the AGPL does not fit your use (for example a
+proprietary product or service), contact Timmy Wong Co. via https://github.com/TimmyWong-TW to
+discuss a different licence.
+
+Third-party content: Bible texts, dictionaries, commentaries, parsing data,
+images, recordings and other content fetched from 信望愛站
+(https://bible.fhl.net) are NOT covered by this licence and remain under their
+own licences; see https://www.fhl.net/main/fhl/fhl8.html. The snapshot of FHL's
+API documentation in src/snapshot.ts and the probe observations in
+test/fixtures/ are included for interoperability and testing.

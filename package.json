@@ -1,0 +1,35 @@
+{
+  "name": "fhl-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm build:spec && wrangler dev",
+    "build:spec": "tsx scripts/build-spec.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "check": "pnpm build:spec && pnpm typecheck && pnpm test && tsx scripts/readme.ts --check",
+    "deploy": "pnpm check && wrangler deploy",
+    "snapshot": "tsx scripts/snapshot.ts",
+    "probe": "tsx scripts/probe.ts",
+    "build:stdio": "pnpm build:spec && esbuild src/stdio.ts --bundle --platform=node --format=esm --target=node20 --outfile=dist/stdio.mjs",
+    "readme": "tsx scripts/readme.ts"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261001.0",
+    "@types/node": "^24.19.2",
+    "esbuild": "~0.25.12",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.0",
+    "wrangler": "^4.40.0"
+  },
+  "packageManager": "pnpm@12.15.0",
+  "bin": {
+    "fhl-tools": "dist/stdio.mjs"
+  },
+  "description": "MCP and UTCP tools for the 信望愛站 (FHL) Bible API, for AI agents",
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "AGPL-3.0-or-later"
+}

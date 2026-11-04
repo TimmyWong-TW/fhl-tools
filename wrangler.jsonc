@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fhl-tools",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "observability": { "enabled": true },
+  // Public only at the custom domain (edge caching of FHL requests needs one); no *.workers.dev URLs.
+  "routes": [{ "pattern": "fhl-tools.ai4.tw", "custom_domain": true }],
+  "workers_dev": false,
+  "preview_urls": false,
+  // AGPL-3.0 §13: link to the source of the code this deployment runs (shown on / and /index.json).
+  "vars": {
+    "SOURCE_URL": "https://github.com/TimmyWong-TW/fhl-tools",
+    // FHL's own pages: unrestricted without a token (content is licensed to FHL).
+    "UNRESTRICTED_ORIGINS": "https://bible.fhl.net,http://bible.fhl.net,https://www.fhl.net,http://www.fhl.net"
+  }
+}

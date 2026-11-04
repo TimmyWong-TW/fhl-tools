@@ -1,0 +1,3510 @@
+{
+  "source": "https://bible.fhl.net/api/",
+  "title": "信望愛站聖經 JSON API",
+  "notice": "注意，信望愛站上各個聖經譯本，有些僅授權給信望愛站使用，請查閱版權說明https://www.fhl.net/main/fhl/fhl8.html，請勿任意使用，以免違法。",
+  "etag": "W/\"6adcad29-6371\"",
+  "lastModified": "Sat, 24 Oct 2026 13:05:45 GMT",
+  "fetchedAt": "2026-11-04T14:18:00.483Z",
+  "hash": "30ccbbeaa8e42588",
+  "endpoints": [
+    {
+      "file": "abv.php",
+      "tool": "fhl_abv",
+      "purpose": "列出聖經與註釋、字彙分析資料庫於 http://ftp.fhl.net/pub/FHL/COBS/data/ 所匯出的離線資料狀況",
+      "output": "status:成功與否\nrecord_count:資料筆數\nparsing:字彙分析資料庫更新時間\ncomment:註釋資料庫更新時間\nrecord:經文版本資料\nbook: 經文版本縮寫\ncname: 經文版本名稱\nproc: 經文需要特殊字型: 0:不需要 1:希臘文 2:希伯來文 3:羅馬拼音 4:Open Han字形\nstrong: 是否有strong's number: 0:無 1:有\nntonly: 是否僅有新約 0:否 1:是\notonly: 是否僅有舊約 0:否 1:是\ncandownload: 是否可以下載離線資料庫 0:否 1:是\nversion: 資料庫最後更新時間",
+      "params": [
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "9afd6a4d6e1a010246695945b5a67342835d59a8965041126bb78c690f1b9f69",
+      "responseFormat": "json",
+      "confirmed": false,
+      "observed": {
+        "keys": [
+          "status",
+          "parsing",
+          "comment",
+          "record_count",
+          "record"
+        ],
+        "recordKeys": [
+          "book",
+          "cname",
+          "proc",
+          "strong",
+          "ntonly",
+          "candownload",
+          "otonly",
+          "version"
+        ]
+      }
+    },
+    {
+      "file": "ab.php",
+      "tool": "fhl_ab",
+      "purpose": "列出聖經基本資料",
+      "output": "record_count:資料筆數\nrecord:經文版本資料\nbook: 經文版本縮寫\ncname: 經文版本名稱\nproc: 經文需要特殊字型: 0:不需要 1:希臘文 2:希伯來文 3:羅馬拼音 4:Open Han 字形\nstrong: 是否有strong's number: 0:無 1:有\nntonly: 是否僅有新約 0:否 1:是\notonly: 是否僅有舊約 0:否 1:是",
+      "params": [],
+      "sectionHash": "3d801966d7c0d4f79d54354af94670a63415294494d669af3a9a61b7acb41deb",
+      "responseFormat": "json",
+      "confirmed": false,
+      "observed": {
+        "keys": [
+          "status",
+          "record_count",
+          "record"
+        ],
+        "recordKeys": [
+          "book",
+          "cname",
+          "proc",
+          "strong",
+          "ntonly",
+          "otonly"
+        ]
+      }
+    },
+    {
+      "file": "listall.html",
+      "tool": "fhl_listall",
+      "purpose": "列出聖經書卷基本資料",
+      "output": "以CSV格式輸出，格式為：編號,英文簡寫,英文全名,中文簡寫,英文短簡寫",
+      "params": [],
+      "sectionHash": "0cbb7940a6503ddbdcebd3cd63af48c6aa6aff63ed333e6e772d5c214b21ee76",
+      "responseFormat": "csv",
+      "confirmed": true,
+      "csvColumns": [
+        "id",
+        "engs",
+        "engf",
+        "chineses",
+        "chinesef",
+        "engs_short"
+      ],
+      "notes": [
+        "實際為 6 欄 CSV（多了中文全名），以 text/html 傳回；本服務轉為 JSON。"
+      ]
+    },
+    {
+      "file": "qb.php",
+      "tool": "fhl_qb",
+      "purpose": "列出聖經經文",
+      "output": "status:成功與否\nrecord_count:資料筆數\nproc:經文特殊字型需求: 0:不需要 1:希臘文 2:希伯來文 3:羅馬拼音 4:Open Han 字形\nversion:經文版本英文簡寫\nv_name:經文版本中文名\nprev:放前一節資料，包含 chineses(中文簡寫) engs(英文簡寫) chap sec 的資料\nnext:放後一節資料，包含 chineses(中文簡寫) engs(英文簡寫) chap sec 的資料\nrecord:每一筆聖經經文資料，內含：\nbid: 經卷編號\nengs: 經卷英文縮寫\nchineses: 經卷中文縮寫\nchap: 章\nsec: 節\nbible_text: 經文",
+      "params": [
+        {
+          "name": "bid",
+          "description": "中文經卷編號 default:1（書卷編號 1-66（1 創世記 … 43 約翰福音 … 66 啟示錄））",
+          "type": "integer",
+          "default": "1",
+          "key": "bid",
+          "minimum": 1,
+          "maximum": 66
+        },
+        {
+          "name": "chap",
+          "description": "章 default:1",
+          "type": "integer",
+          "default": "1",
+          "key": "chap"
+        },
+        {
+          "name": "sec",
+          "description": "節 如果不打，表示整章，支援1 1-5 1,5,6 1-2,5,8-3 這樣的格式，不過僅限於qb.php，其他的API不一定支援這些功能",
+          "type": "string",
+          "key": "sec"
+        },
+        {
+          "name": "version",
+          "description": "聖經版本 default:nstrunv",
+          "type": "string",
+          "default": "unv",
+          "key": "version"
+        },
+        {
+          "name": "strong",
+          "description": "是否要包括Strong's number 1:要 0:不要",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "要"
+            },
+            {
+              "code": "0",
+              "label": "不要"
+            }
+          ],
+          "key": "strong"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "637672e50f2827a92ed87af60adaa7b46278df3a1e568019900731fe73dc5ab3",
+      "responseFormat": "json",
+      "confirmed": true,
+      "responseSchema": "VerseList",
+      "bibleVersions": true,
+      "notes": [
+        "文件寫 version 預設 nstrunv，但未給 version 或給 nstrunv 都回傳 Fail:version Error!；本服務預設帶 version=unv。",
+        "版本代碼可由 fhl_ab 取得。"
+      ],
+      "example": {
+        "bid": 43,
+        "chap": 3,
+        "sec": "16",
+        "version": "unv"
+      },
+      "inject": {
+        "version": "unv"
+      },
+      "observed": {
+        "keys": [
+          "status"
+        ]
+      }
+    },
+    {
+      "file": "rt.php",
+      "tool": "fhl_rt",
+      "purpose": "列出聖經經文註腳",
+      "output": "包含在<result></result>之間\n<record_count></record_count>之間放資料筆數\n<version></version>之間放經文版本英文簡寫\n<engs></engs>之間放英文經卷縮寫\n每一筆聖經經文註腳<record></record>包含起來，內含：\nid: 註腳編號\ntext: 註腳內容",
+      "params": [
+        {
+          "name": "bid",
+          "description": "經卷編號（書卷編號 1-66（1 創世記 … 43 約翰福音 … 66 啟示錄））",
+          "type": "integer",
+          "key": "bid",
+          "required": true,
+          "minimum": 1,
+          "maximum": 66
+        },
+        {
+          "name": "id",
+          "description": "註腳編號",
+          "type": "integer",
+          "key": "id",
+          "required": true
+        },
+        {
+          "name": "chap",
+          "description": "章(不一定需要)",
+          "type": "integer",
+          "key": "chap"
+        },
+        {
+          "name": "version",
+          "description": "聖經版本 default:tcv",
+          "type": "string",
+          "default": "tcv",
+          "key": "version"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體 default:0",
+          "type": "boolean",
+          "default": "0",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "a79335ff7f5046a847a7c54dd520e9f6e69af9c0b84061cff191d3d8de5c3008",
+      "responseFormat": "json",
+      "confirmed": true,
+      "notes": [
+        "必須給註腳編號 id，否則永遠 record_count=0；chap 不影響結果。"
+      ],
+      "example": {
+        "bid": 1,
+        "id": 1,
+        "version": "tcv"
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "record_count",
+          "version",
+          "engs"
+        ]
+      }
+    },
+    {
+      "file": "qp.php",
+      "tool": "fhl_qp",
+      "purpose": "列出聖經字彙分析",
+      "output": "status:成功與否\nrecord_count:資料筆數\nN:新舊約資訊，0新約 1舊約\nubs:那一個版本的新約經文字彙分析 UBS4,UBS5,UBS6(舊約無此欄位）\nprev:放前一節資料，包含 chineses(中文簡寫) bid(經卷編號) engs(英文簡寫) chap sec 的資料\nnext:放後一節資料，包含 chineses(中文簡寫) bid(經卷編號) engs(英文簡寫) chap sec 的資料\nrecord內含：\nid: 經節絕對編號\nbid: 經卷編號\nengs: 經卷英文縮寫\nchap: 章\nsec: 節\nwid: 字序\nword: 原文\nsn: 原文編號\npro: 詞性\nwform: 字彙分析\norig: 原型\nexp: 中文解釋\nremark: 註釋\n當wid=0時record包含：\nid: 經節絕對編號\nbid: 經卷編號\nengs: 經卷英文縮寫\nchap: 章\nsec: 節\nwid: 字序\nword: 原文經文\nexp: 原文直譯\nchineses: 中文卷名縮寫\nchinesef: 中文卷名\nremark: 註釋（舊約時用來當平行經文）",
+      "params": [
+        {
+          "name": "bid",
+          "description": "經卷編號（書卷編號 1-66（1 創世記 … 43 約翰福音 … 66 啟示錄））",
+          "type": "integer",
+          "key": "bid",
+          "required": true,
+          "minimum": 1,
+          "maximum": 66
+        },
+        {
+          "name": "chap",
+          "description": "章 default:0",
+          "type": "integer",
+          "default": "0",
+          "key": "chap",
+          "required": true
+        },
+        {
+          "name": "sec",
+          "description": "節 default:0",
+          "type": "string",
+          "default": "0",
+          "key": "sec",
+          "required": true
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        },
+        {
+          "name": "disubs5",
+          "description": "要不要顯示UBS5或UBS6 1:不顯示 0:顯示（內定）",
+          "type": "boolean",
+          "default": "0",
+          "enum": [
+            {
+              "code": "1",
+              "label": "不顯示"
+            },
+            {
+              "code": "0",
+              "label": "顯示"
+            }
+          ],
+          "key": "disubs5"
+        }
+      ],
+      "sectionHash": "5b8d5c962b3b18829ec511cab66b04cb278b710e90f7951dfde5ae6b7bc884fb",
+      "responseFormat": "json",
+      "confirmed": true,
+      "notes": [
+        "缺 bid 回傳 Fail:engs error!；缺 chap 或 sec 時上游輸出不合法的 JSON。"
+      ],
+      "example": {
+        "bid": 43,
+        "chap": 3,
+        "sec": 16
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "record_count",
+          "N",
+          "ubs",
+          "record",
+          "prev",
+          "next"
+        ],
+        "recordKeys": [
+          "id",
+          "bid",
+          "engs",
+          "chap",
+          "sec",
+          "wid",
+          "word",
+          "exp",
+          "chineses",
+          "chinesef"
+        ]
+      }
+    },
+    {
+      "file": "sc.php",
+      "tool": "fhl_sc",
+      "purpose": "列出註釋",
+      "output": "record_count:放資料筆數\n註釋資料放record:\nvalidbook=1 時內含：\nid: 註釋書編號\nname: 註釋書名稱\n沒有validbook參數\n內含：\ntitle: 標題\nbook_name: 註釋書名稱\ncom_text: 註釋內容\nprev: 前一段，包含 engs bid chap sec 的資料\nnext: 後一段，包含 engs bid chap sec 的資料",
+      "params": [
+        {
+          "name": "validbook",
+          "description": "=1 時show出有效的註釋書，不可與其他參數共用",
+          "type": "string",
+          "key": "validbook"
+        },
+        {
+          "name": "book",
+          "description": "註釋書編號（可以用「1,2,3」這種方式同時查詢多本註釋書）",
+          "type": "string",
+          "key": "book"
+        },
+        {
+          "name": "bid",
+          "description": "經卷編號（書卷編號 1-66（1 創世記 … 43 約翰福音 … 66 啟示錄））",
+          "type": "integer",
+          "key": "bid",
+          "minimum": 1,
+          "maximum": 66
+        },
+        {
+          "name": "chap",
+          "description": "章 default:0",
+          "type": "integer",
+          "default": "0",
+          "key": "chap"
+        },
+        {
+          "name": "sec",
+          "description": "節 default:0",
+          "type": "string",
+          "default": "0",
+          "key": "sec"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "86831fb6c59a60391b30d6b8cf0c424b174d108fdc8de670d93376dccf40f8d0",
+      "responseFormat": "json",
+      "confirmed": true,
+      "notes": [
+        "validbook=1 時忽略其他所有參數，只列出註釋書（id/name）。",
+        "查註釋需 bid+chap+sec；未給 book 時使用預設註釋書。"
+      ],
+      "example": {
+        "book": 3,
+        "bid": 43,
+        "chap": 3,
+        "sec": 16
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "record_count",
+          "prev",
+          "next",
+          "record"
+        ],
+        "recordKeys": [
+          "title",
+          "book_name",
+          "com_text"
+        ]
+      }
+    },
+    {
+      "file": "ssc.php",
+      "tool": "fhl_ssc",
+      "purpose": "搜尋註釋",
+      "output": "record_count:放資料筆數\n註釋資料放record:\n內含：\ntitle: 標題\ntag: 註釋書編號\nbook_name: 註釋書名稱\nchinesef: 中文經卷\nbid: 經卷編號\nengs: 英文經卷\nbchap: 開始章\nbsec: 開始節\nechap: 結束章\nesec: 結束節",
+      "params": [
+        {
+          "name": "book",
+          "description": "註釋書編號（可以用「1,2,3」這種方式同時查詢多本註釋書）",
+          "type": "string",
+          "key": "book"
+        },
+        {
+          "name": "key",
+          "description": "關鍵字",
+          "type": "string",
+          "key": "key",
+          "required": true
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "02e1399fd8e2bd8df8ab4b48d5b203d8381ad2e13ab839e23e9533d07838e6ab",
+      "responseFormat": "json",
+      "confirmed": true,
+      "notes": [
+        "結果超過 500 筆時回傳 Fail:record count > 500，請用較精確的關鍵字（本端點沒有 limit）。"
+      ],
+      "example": {
+        "book": 3,
+        "key": "尼哥底母"
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "record_count",
+          "record"
+        ],
+        "recordKeys": [
+          "title",
+          "tag",
+          "book_name",
+          "chinesef",
+          "bid",
+          "engs",
+          "bchap",
+          "bsec",
+          "echap",
+          "esec"
+        ]
+      }
+    },
+    {
+      "file": "sd.php",
+      "tool": "fhl_sd",
+      "purpose": "列出原文字典",
+      "output": "record_count:資料筆數\n原文字典資料放record中\n內含：\nsn: 原文編號\ndic_text: 原文字典中文內文\nedic_text: 原文字典英文內文\ndic_type: 原文字典種類：0：新約 1:舊約\norig: 原文\nsame: 同源字\n同源字（目前只有新約有資料）內含：\nword: 原文\ncsn: 原文編號\nccnt: 出現次數\ncexp: 中文解釋",
+      "params": [
+        {
+          "name": "N",
+          "description": "範圍 0：新約 1:舊約",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "0",
+              "label": "新約"
+            },
+            {
+              "code": "1",
+              "label": "舊約"
+            }
+          ],
+          "key": "n"
+        },
+        {
+          "name": "k",
+          "description": "原文編號",
+          "type": "string",
+          "key": "k",
+          "required": true
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "03c71558217370e2b3dc3928822e99762eef647ef0f4877a01e5ded1fa71009a",
+      "responseFormat": "json",
+      "confirmed": true,
+      "notes": [
+        "參數名 N 大小寫有別（n 會被忽略），本服務會自動轉換。"
+      ],
+      "example": {
+        "N": 0,
+        "k": "25"
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "record_count",
+          "record"
+        ],
+        "recordKeys": [
+          "sn",
+          "dic_text",
+          "edic_text",
+          "dic_type",
+          "orig",
+          "same"
+        ]
+      }
+    },
+    {
+      "file": "sbdag.php",
+      "tool": "fhl_sbdag",
+      "purpose": "列出浸宣中文希臘文字典，僅授權給信望愛站使用。",
+      "output": "record_count:資料筆數\n原文字典資料放record中\n內含：\nsn: 原文編號\ndic_text: 原文字典中文內文",
+      "params": [
+        {
+          "name": "k",
+          "description": "原文編號",
+          "type": "string",
+          "key": "k",
+          "required": true
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "5152e7067ac448a4d2920f78c2f556f57b723bb5fcad222764576af3e93bd57d",
+      "responseFormat": "json",
+      "confirmed": true,
+      "restricted": true,
+      "example": {
+        "k": "25"
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "record_count",
+          "record"
+        ],
+        "recordKeys": [
+          "sn",
+          "dic_text"
+        ]
+      }
+    },
+    {
+      "file": "stwcbhdic.php",
+      "tool": "fhl_stwcbhdic",
+      "purpose": "列出浸宣中文希伯來文字典，僅授權給信望愛站使用。",
+      "output": "record_count:資料筆數\n原文字典資料放record中\n內含：\nsn: 原文編號\ndic_text: 原文字典中文內文",
+      "params": [
+        {
+          "name": "k",
+          "description": "原文編號",
+          "type": "string",
+          "key": "k",
+          "required": true
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "36085d3645458c3a88548a4e336302963bc87a12c428e21e3aca99bc50ef9c47",
+      "responseFormat": "json",
+      "confirmed": true,
+      "restricted": true,
+      "notes": [
+        "缺 k 時上游 HTTP 500 並回傳截斷的 JSON。"
+      ],
+      "example": {
+        "k": "1"
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "record_count",
+          "record"
+        ],
+        "recordKeys": [
+          "sn",
+          "dic_text"
+        ]
+      }
+    },
+    {
+      "file": "qsb.php",
+      "tool": "fhl_qsb",
+      "purpose": "經文引用功能",
+      "output": "record_count放資料筆數\n經文查詢資料放record中\n內含：\nchineses: 經卷中文縮寫\nbid: 經卷編號\nengs: 經卷英文縮寫\nchap: 章\nsec: 節\nbible_text: 經文",
+      "params": [
+        {
+          "name": "version",
+          "description": "聖經版本 default:和合本(unv)",
+          "type": "string",
+          "default": "unv",
+          "key": "version"
+        },
+        {
+          "name": "bid",
+          "description": "default 書卷編號（書卷編號 1-66（1 創世記 … 43 約翰福音 … 66 啟示錄））",
+          "type": "integer",
+          "key": "bid",
+          "minimum": 1,
+          "maximum": 66
+        },
+        {
+          "name": "qstr",
+          "description": "引用字串：格式請參考 https://bible.fhl.net/new/allreadme.html 三、經文參照查詢 不過要把「#」與「|」去除，如 qstr=太 10:1-3",
+          "type": "string",
+          "key": "qstr",
+          "required": true
+        },
+        {
+          "name": "strong",
+          "description": "是否有strong's number: 0:無 1:有",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "0",
+              "label": "無"
+            },
+            {
+              "code": "1",
+              "label": "有"
+            }
+          ],
+          "key": "strong"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "2ee99ae55c8de38d057c2455a56cf262a8c238b444665ed3ad89f77be146e477",
+      "responseFormat": "json",
+      "confirmed": true,
+      "responseSchema": "VerseList",
+      "bibleVersions": true,
+      "notes": [
+        "bid 是 qstr 未寫書卷時的預設書卷（如 qstr=3:16、bid=43 → 約 3:16）；qstr 有書卷名時 bid 無效。",
+        "qstr 可用中文或英文縮寫、多段以 ; 分隔（如 約3:16;羅5:8 或 John 3:16）。",
+        "gb 也會影響 qstr 的解讀：gb=簡體 時要用簡體書卷名。"
+      ],
+      "example": {
+        "qstr": "約 3:16"
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "record_count",
+          "proc",
+          "record"
+        ],
+        "recordKeys": [
+          "chineses",
+          "bid",
+          "engs",
+          "chap",
+          "sec",
+          "bible_text"
+        ]
+      }
+    },
+    {
+      "file": "se.php",
+      "tool": "fhl_se",
+      "purpose": "經文查詢功能",
+      "output": "record_count:資料筆數\norig:查詢形式 0：經文關鍵字 1:希臘文編號 2:希伯來文編號\nkey:輸入的查詢字串\n查詢回傳資料放record中，\n內含：\nid: 經節絕對編號\nchineses: 經卷中文縮寫\nbid: 經卷編號\nengs: 經卷英文縮寫\nchap: 章\nsec: 節\nbible_text: 經文",
+      "params": [
+        {
+          "name": "VERSION",
+          "description": "聖經版本 default:和合本(unv)",
+          "type": "string",
+          "default": "unv",
+          "key": "version"
+        },
+        {
+          "name": "orig",
+          "description": "查詢形式 0：經文關鍵字 1:希臘文編號 2:希伯來文編號",
+          "type": "string",
+          "enum": [
+            {
+              "code": "0",
+              "label": "經文關鍵字"
+            },
+            {
+              "code": "1",
+              "label": "希臘文編號"
+            },
+            {
+              "code": "2",
+              "label": "希伯來文編號"
+            }
+          ],
+          "key": "orig"
+        },
+        {
+          "name": "q",
+          "description": "查詢內容",
+          "type": "string",
+          "key": "q",
+          "required": true
+        },
+        {
+          "name": "RANGE",
+          "description": "查詢模式 0：全部 1：新約 2:舊約 3:範圍 default:0",
+          "type": "string",
+          "default": "0",
+          "enum": [
+            {
+              "code": "0",
+              "label": "全部"
+            },
+            {
+              "code": "1",
+              "label": "新約"
+            },
+            {
+              "code": "2",
+              "label": "舊約"
+            },
+            {
+              "code": "3",
+              "label": "範圍"
+            }
+          ],
+          "key": "range"
+        },
+        {
+          "name": "range_bid",
+          "description": "查詢模式=3 時，開始經卷編號1-66（書卷編號 1-66（1 創世記 … 43 約翰福音 … 66 啟示錄））",
+          "type": "integer",
+          "key": "range_bid",
+          "minimum": 1,
+          "maximum": 66
+        },
+        {
+          "name": "range_eid",
+          "description": "查詢模式=3 時，結束經卷編號1-66（書卷編號 1-66（1 創世記 … 43 約翰福音 … 66 啟示錄））",
+          "type": "integer",
+          "key": "range_eid",
+          "minimum": 1,
+          "maximum": 66
+        },
+        {
+          "name": "limit",
+          "description": "最多顯示幾筆 default:unlimited",
+          "type": "integer",
+          "key": "limit"
+        },
+        {
+          "name": "offset",
+          "description": "跳過幾筆 default:0",
+          "type": "integer",
+          "default": "0",
+          "key": "offset"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        },
+        {
+          "name": "count_only",
+          "description": "是否只輸出筆數 1:是 0:否",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "是"
+            },
+            {
+              "code": "0",
+              "label": "否"
+            }
+          ],
+          "key": "count_only"
+        },
+        {
+          "name": "index_only",
+          "description": "是否只輸出經卷（不含內容） 1:是 0:否",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "是"
+            },
+            {
+              "code": "0",
+              "label": "否"
+            }
+          ],
+          "key": "index_only"
+        }
+      ],
+      "sectionHash": "d3f57c0900bb9a318b31844da69648064990c7a4b2f3d11745525d2bc228fe5f",
+      "responseFormat": "json",
+      "confirmed": true,
+      "responseSchema": "SearchResult",
+      "bibleVersions": true,
+      "notes": [
+        "符合筆數超過 500 時上游回傳 Fail:record count > 500；未指定 limit 時本服務自動帶 limit=100。",
+        "VERSION/RANGE 大小寫有別（小寫會被上游靜默忽略），本服務自動轉換。",
+        "gb 也影響查詢字串解讀；RANGE=範圍 時才使用 range_bid/range_eid。"
+      ],
+      "example": {
+        "q": "愛",
+        "limit": 3
+      },
+      "inject": {
+        "limit": "100"
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "orig",
+          "key",
+          "record_count",
+          "record"
+        ],
+        "recordKeys": [
+          "id",
+          "chineses",
+          "bid",
+          "engs",
+          "chap",
+          "sec",
+          "bible_text"
+        ]
+      }
+    },
+    {
+      "file": "ob.php",
+      "tool": "fhl_ob",
+      "purpose": "珍本聖經書籍列表功能",
+      "output": "record_count：資料筆數\n每一筆書籍資料放record中，內含：\nid: 書籍絕對編號\ndiv: 分類\nage: 著作西元年代\nagec: 著作中文年代\ntitle: 書名\nauthor: 作者\nlang: 語文\nstyle: 文體格式\nprocb: 1:新約 2:舊約 3:新舊約 0:不用處理\nintro: 簡介\ncopyright: 著作權資訊\nprovider: 提供者\nremark: 備註",
+      "params": [
+        {
+          "name": "id",
+          "description": "書籍編號，不輸入時就顯示出全部",
+          "type": "integer",
+          "key": "id"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "9472c32200f26f1929438a47f88737b1a7f84c96f4ea468e4b176b41772af1f8",
+      "responseFormat": "json",
+      "confirmed": false,
+      "observed": {
+        "keys": [
+          "status",
+          "record_count",
+          "record"
+        ],
+        "recordKeys": [
+          "id",
+          "div",
+          "age",
+          "agec",
+          "title",
+          "author",
+          "lang",
+          "style",
+          "procb",
+          "intro",
+          "copyright",
+          "provider",
+          "remark"
+        ]
+      }
+    },
+    {
+      "file": "sob.php",
+      "tool": "fhl_sob",
+      "purpose": "珍本聖經書籍查詢功能",
+      "output": "查詢模式mode：0：檢視模式 1:查詢模式\n每一筆書籍資料放record中，內含：\nmode=1時:\nbook: 書籍絕對編號\nengs: 經卷英文縮寫\nvid: 經卷編號 1:創世記 2:出埃及記 ....\nchap: 章\nsec: 節\nname: 書名\nmode=0時:\nbook: 書籍絕對編號\nchinesef: 經卷中文全名\nengs: 經卷英文縮寫\nvid: 經卷編號 1:創世記 2:出埃及記 ....\nname: 書名\npage: 頁數\ntotal: 總頁數\nprev: 上一頁頁數\nnext: 下一頁頁數\nbchap: 開始章\nbsec: 開始節\nechap: 結束章\nesec: 結束節\nsmall: 小圖URL\norig: 原圖URL",
+      "params": [
+        {
+          "name": "book",
+          "description": "查那一本書 all:所有的書(引發mode=1查詢模式) 數字：書籍編號(引發mode=0查詢模式)",
+          "type": "string",
+          "key": "book"
+        },
+        {
+          "name": "bid",
+          "description": "經卷編號：1 創世記 2出埃及記.... 有bid時bid優先，否則就用engs搜尋（書卷編號 1-66（1 創世記 … 43 約翰福音 … 66 啟示錄））",
+          "type": "integer",
+          "key": "bid",
+          "minimum": 1,
+          "maximum": 66
+        },
+        {
+          "name": "engs",
+          "description": "經卷英文縮寫",
+          "type": "string",
+          "key": "engs"
+        },
+        {
+          "name": "chap",
+          "description": "章",
+          "type": "integer",
+          "key": "chap"
+        },
+        {
+          "name": "sec",
+          "description": "節",
+          "type": "string",
+          "key": "sec"
+        },
+        {
+          "name": "page",
+          "description": "頁數",
+          "type": "integer",
+          "key": "page"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "c7fc10a601cff6364769f8fed05ac0098a4c22cc21f5b687f1c6f874bb5d8639",
+      "responseFormat": "json",
+      "confirmed": true,
+      "notes": [
+        "bid 與 engs 需擇一；同時給時 bid 優先。回傳沒有 record_count。"
+      ],
+      "example": {
+        "book": "all",
+        "bid": 43,
+        "chap": 3,
+        "sec": 16
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "mode",
+          "record"
+        ],
+        "recordKeys": [
+          "book",
+          "engs",
+          "vid",
+          "chap",
+          "sec",
+          "name"
+        ]
+      }
+    },
+    {
+      "file": "sobj.php",
+      "tool": "fhl_sobj",
+      "purpose": "地點與照片查詢功能",
+      "output": "record_count:資料筆數\n每一筆資料放record中，\n內含：\nid: 物件絕對編號\nename: 英文名字\nmname: 現代名字\ncname: 和合本名字\nc1name: 新標點和合本名字\nc2name: 現代中文譯本名字\nhsname: 舊約原文編號\ngsname: 新約原文編號\notype: 物件座標型態0 點 1 polyline 2 polygon\nobjpath: 物件座標\nother: 別名\nremark: 備註\nexp5: 說明\nis_site: 是不是地點，不是就=0\nhas_collect: 有沒有照片或影音資料，有就=1\nrelated: 相關資料",
+      "params": [
+        {
+          "name": "engs",
+          "description": "經卷英文縮寫",
+          "type": "string",
+          "key": "engs",
+          "required": true
+        },
+        {
+          "name": "chap",
+          "description": "章",
+          "type": "integer",
+          "key": "chap",
+          "required": true
+        },
+        {
+          "name": "sec",
+          "description": "節",
+          "type": "string",
+          "key": "sec"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "51e181e2ccdb457aab053b8e6da566ba2f62a75997ff875b851519a66bc8c016",
+      "responseFormat": "json",
+      "confirmed": true,
+      "notes": [
+        "未給 sec 時回傳整章。實際欄位名為 hsnum/gsnum（文件寫 hsname/gsname）。"
+      ],
+      "example": {
+        "engs": "John",
+        "chap": 2,
+        "sec": 1
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "record_count",
+          "record"
+        ],
+        "recordKeys": [
+          "id",
+          "ename",
+          "mname",
+          "cname",
+          "c1name",
+          "c2name",
+          "hsnum",
+          "gsnum",
+          "otype",
+          "objpath",
+          "other",
+          "remark",
+          "exp5",
+          "is_site",
+          "related",
+          "has_collect"
+        ]
+      }
+    },
+    {
+      "file": "st.php",
+      "tool": "fhl_st",
+      "purpose": "主題查經查詢功能",
+      "output": "record_count:資料筆數\nN:輸入變數N\nk:輸入變數k\nkeyword:輸入變數keyword\n每一筆資料放record中，\n內含：\nbook: 書籍 0:torrey英文 1:naves英文 2:torrey中譯 3:naves中譯\nid: 編號\ntopic: 主題\ntext: 內容",
+      "params": [
+        {
+          "name": "N",
+          "description": "主題查經書籍選擇 4:全部查詢 0:torrey英文 1:naves英文 2:torrey中譯 3:naves中譯",
+          "type": "string",
+          "enum": [
+            {
+              "code": "4",
+              "label": "全部查詢"
+            },
+            {
+              "code": "0",
+              "label": "torrey英文"
+            },
+            {
+              "code": "1",
+              "label": "naves英文"
+            },
+            {
+              "code": "2",
+              "label": "torrey中譯"
+            },
+            {
+              "code": "3",
+              "label": "naves中譯"
+            }
+          ],
+          "key": "n"
+        },
+        {
+          "name": "k",
+          "description": "編號，如果編號與關鍵字都存在，以編號優先",
+          "type": "string",
+          "key": "k"
+        },
+        {
+          "name": "keyword",
+          "description": "關鍵字",
+          "type": "string",
+          "key": "keyword"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        },
+        {
+          "name": "count_only",
+          "description": "是否只輸出筆數 1:是 0:否",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "是"
+            },
+            {
+              "code": "0",
+              "label": "否"
+            }
+          ],
+          "key": "count_only"
+        }
+      ],
+      "sectionHash": "35f9060bc1e3febb1bf32ecfae3f7aea7442ede295b12c2881e8f40a916a4d17",
+      "responseFormat": "json",
+      "confirmed": true,
+      "notes": [
+        "需給 k 或 keyword（k 優先）；兩者都沒有時上游回傳數百 KB 不合法的 JSON。",
+        "N 未給時為 0（torrey英文），中文關鍵字請用 N=全部查詢 或中譯。N 大小寫有別。"
+      ],
+      "example": {
+        "N": 4,
+        "keyword": "愛"
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "N",
+          "k",
+          "keyword",
+          "record_count",
+          "record"
+        ],
+        "recordKeys": [
+          "book",
+          "id",
+          "topic",
+          "text"
+        ]
+      }
+    },
+    {
+      "file": "au.php",
+      "tool": "fhl_au",
+      "purpose": "有聲聖經功能",
+      "output": "status:成功與否\nkeyword:輸入變數keyword\nname:有聲聖經名稱\nchinesef:經卷名\nengf:英文經卷名\nchap:章\npbid:前一章的經卷編號\npchinesef:前一章的經卷名\npchap:前一章的章數\nnbid:下一章的經卷編號\nnchinesef:下一章的經卷名\nnchap:下一章的章數\nogg:本章的ogg URL\nmp3:本章的mp3 URL",
+      "params": [
+        {
+          "name": "version",
+          "description": "有聲聖經選擇 0.和合本 1.台語 2.客家話 3.廣東話 4.現代中文譯本 5.台語新約(台灣長老教會傳播中心授權) 6.紅皮聖經 7.希伯來文 8.福州話 9.希臘文 10.spring台語 11.spring和合本 12.NetBible中文版 13.全民台語聖經 14.鄒語 15.台語南部腔 17.現代台語譯本 18.現代客語譯本 19.達悟語",
+          "type": "string",
+          "enum": [
+            {
+              "code": "0",
+              "label": "和合本"
+            },
+            {
+              "code": "1",
+              "label": "台語"
+            },
+            {
+              "code": "2",
+              "label": "客家話"
+            },
+            {
+              "code": "3",
+              "label": "廣東話"
+            },
+            {
+              "code": "4",
+              "label": "現代中文譯本"
+            },
+            {
+              "code": "5",
+              "label": "台語新約"
+            },
+            {
+              "code": "6",
+              "label": "紅皮聖經"
+            },
+            {
+              "code": "7",
+              "label": "希伯來文"
+            },
+            {
+              "code": "8",
+              "label": "福州話"
+            },
+            {
+              "code": "9",
+              "label": "希臘文"
+            },
+            {
+              "code": "10",
+              "label": "spring台語"
+            },
+            {
+              "code": "11",
+              "label": "spring和合本"
+            },
+            {
+              "code": "12",
+              "label": "NetBible中文版"
+            },
+            {
+              "code": "13",
+              "label": "全民台語聖經"
+            },
+            {
+              "code": "14",
+              "label": "鄒語"
+            },
+            {
+              "code": "15",
+              "label": "台語南部腔"
+            },
+            {
+              "code": "17",
+              "label": "現代台語譯本"
+            },
+            {
+              "code": "18",
+              "label": "現代客語譯本"
+            },
+            {
+              "code": "19",
+              "label": "達悟語"
+            }
+          ],
+          "key": "version"
+        },
+        {
+          "name": "bid",
+          "description": "經卷編號1-66（書卷編號 1-66（1 創世記 … 43 約翰福音 … 66 啟示錄））",
+          "type": "integer",
+          "key": "bid",
+          "minimum": 1,
+          "maximum": 66
+        },
+        {
+          "name": "chap",
+          "description": "章",
+          "type": "integer",
+          "key": "chap"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "3eddf8fc3360add241047048636634f136e07a5a12d34efe610fea50d3892f96",
+      "responseFormat": "json",
+      "confirmed": false,
+      "observed": {
+        "keys": [
+          "status",
+          "name",
+          "chinesef",
+          "engf",
+          "chap",
+          "pchinesef",
+          "pchap",
+          "nchinesef",
+          "nchap",
+          "ogg",
+          "mp3",
+          "nbid",
+          "pbid"
+        ]
+      }
+    },
+    {
+      "file": "aump4.php",
+      "tool": "fhl_aump4",
+      "purpose": "提供投影片的有聲聖經功能",
+      "output": "status:成功與否\nkeyword:輸入變數keyword\nname:有聲聖經名稱\nchinesef:經卷名\nengf:英文經卷名\nchap:章\npbid:前一章的經卷編號\npchinesef:前一章的經卷名\npchap:前一章的章數\nnbid:下一章的經卷編號\nnchinesef:下一章的經卷名\nnchap:下一章的章數\nogg:本章的ogg URL\nmp3:本章的mp3 URL\nmp4:本章的mp4 URL",
+      "params": [
+        {
+          "name": "version",
+          "description": "有聲聖經選擇 17.現代台語譯本",
+          "type": "string",
+          "enum": [
+            {
+              "code": "17",
+              "label": "現代台語譯本"
+            }
+          ],
+          "key": "version"
+        },
+        {
+          "name": "bid",
+          "description": "經卷編號1-66（書卷編號 1-66（1 創世記 … 43 約翰福音 … 66 啟示錄））",
+          "type": "integer",
+          "key": "bid",
+          "minimum": 1,
+          "maximum": 66
+        },
+        {
+          "name": "chap",
+          "description": "章",
+          "type": "integer",
+          "key": "chap"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "04723a8708c8db8a4c2c8e057fbed604bb3f594b3a2bbd61e257e3c49f01e67b",
+      "responseFormat": "json",
+      "confirmed": false,
+      "observed": {
+        "keys": [
+          "status",
+          "name",
+          "chinesef",
+          "engf",
+          "chap",
+          "pchinesef",
+          "pchap",
+          "nchinesef",
+          "nchap",
+          "ogg",
+          "mp3",
+          "mp4",
+          "nbid",
+          "pbid"
+        ]
+      }
+    },
+    {
+      "file": "qsub.php",
+      "tool": "fhl_qsub",
+      "purpose": "列出次經經文",
+      "output": "status:成功與否\nrecord_count:資料筆數\nproc:經文特殊字型需求: 0:不需要 1:希臘文 2:希伯來文 3:羅馬拼音 4:Open Han 字形\nversion:經文版本英文簡寫\nv_name:經文版本中文名\nprev:放前一節資料，包含 chineses(中文簡寫) engs(英文簡寫) chap sec 的資料\nnext:放後一節資料，包含 chineses(中文簡寫) engs(英文簡寫) chap sec 的資料\nrecord:每一筆次經經文資料，內含：\nengs: 經卷英文縮寫\nbid: 經卷編號\nchap: 章\nsec: 節\nbible_text: 經文",
+      "params": [
+        {
+          "name": "bid",
+          "description": "經卷編號（書卷編號 101-115（101 馬加比一書 … 115 以斯帖補篇））",
+          "type": "integer",
+          "key": "bid",
+          "minimum": 101,
+          "maximum": 115
+        },
+        {
+          "name": "chap",
+          "description": "章 default:1",
+          "type": "integer",
+          "default": "1",
+          "key": "chap"
+        },
+        {
+          "name": "sec",
+          "description": "節 如果不打，表示整章，支援1 1-5 1,5,6 1-2,5,8-3 這樣的格式，不過僅限於qb.php，其他的API不一定支援這些功能",
+          "type": "string",
+          "key": "sec"
+        },
+        {
+          "name": "version",
+          "description": "聖經版本 default:nstrunv",
+          "type": "string",
+          "default": "c1933",
+          "key": "version"
+        },
+        {
+          "name": "strong",
+          "description": "是否要包括Strong's number 1:要 0:不要",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "要"
+            },
+            {
+              "code": "0",
+              "label": "不要"
+            }
+          ],
+          "key": "strong"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "e4649a67ad50a78311b3865b99fecdf54993f306ae7b0ebba633cf9c7b705ca2",
+      "responseFormat": "json",
+      "confirmed": true,
+      "bookSet": "apocrypha",
+      "responseSchema": "VerseList",
+      "notes": [
+        "bid 為次經書卷 101-115（101 馬一 … 115 斯補），超出範圍時改回傳 101；version 實際預設 c1933，文件寫的 nstrunv 會得到 0 筆。"
+      ],
+      "observed": {
+        "keys": [
+          "status",
+          "record_count",
+          "v_name",
+          "version",
+          "proc",
+          "record",
+          "next"
+        ],
+        "recordKeys": [
+          "engs",
+          "bid",
+          "chineses",
+          "chap",
+          "sec",
+          "bible_text"
+        ]
+      }
+    },
+    {
+      "file": "qaf.php",
+      "tool": "fhl_qaf",
+      "purpose": "列出使徒教父經文",
+      "output": "status:成功與否\nrecord_count:資料筆數\nproc:經文特殊字型需求: 0:不需要 1:希臘文 2:希伯來文 3:羅馬拼音 4:Open Han 字形\nversion:經文版本英文簡寫\nv_name:經文版本中文名\nprev:放前一節資料，包含 chineses(中文簡寫) engs(英文簡寫) chap sec 的資料\nnext:放後一節資料，包含 chineses(中文簡寫) engs(英文簡寫) chap sec 的資料\nrecord:每一筆次經經文資料，內含：\nengs: 經卷英文縮寫\nbid: 經卷編號\nchineses: 經卷中文縮寫\nchap: 章\nsec: 節\nbible_text: 經文",
+      "params": [
+        {
+          "name": "bid",
+          "description": "經卷編號（書卷編號 201-217（201 革利免一書 … 217 衆長老的傳統））",
+          "type": "integer",
+          "key": "bid",
+          "minimum": 201,
+          "maximum": 217
+        },
+        {
+          "name": "chineses",
+          "description": "中文經卷縮寫 default:革利免一書",
+          "type": "string",
+          "default": "革利免一書",
+          "key": "chineses"
+        },
+        {
+          "name": "chap",
+          "description": "章 default:1",
+          "type": "integer",
+          "default": "1",
+          "key": "chap"
+        },
+        {
+          "name": "sec",
+          "description": "節 如果不打，表示整章，支援1 1-5 1,5,6 1-2,5,8-3 這樣的格式，不過僅限於qb.php，其他的API不一定支援這些功能",
+          "type": "string",
+          "key": "sec"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        }
+      ],
+      "sectionHash": "15019640ca09a5e393d7afda393bf2941d5108d4c8315868e1e0e6a8e70357ca",
+      "responseFormat": "json",
+      "confirmed": true,
+      "bookSet": "fathers",
+      "responseSchema": "VerseList",
+      "notes": [
+        "bid 為使徒教父書卷 201-217（201 革利免一書 … 217 衆長老的傳統），超出範圍時改回傳 201；也可用 chineses 指定。"
+      ],
+      "observed": {
+        "keys": [
+          "status",
+          "record_count",
+          "v_name",
+          "version",
+          "proc",
+          "record",
+          "prev",
+          "next"
+        ],
+        "recordKeys": [
+          "engs",
+          "bid",
+          "chineses",
+          "chap",
+          "sec",
+          "bible_text"
+        ]
+      }
+    },
+    {
+      "file": "sesub.php",
+      "tool": "fhl_sesub",
+      "purpose": "次經經文查詢功能",
+      "output": "record_count:資料筆數\norig:查詢形式 0：經文關鍵字\nkey:輸入的查詢字串\n查詢回傳資料放record中，\n內含：\nid: 經節絕對編號\nchineses: 經卷中文縮寫\nbid: 經卷編號\nengs: 經卷英文縮寫\nchap: 章\nsec: 節\nbible_text: 經文",
+      "params": [
+        {
+          "name": "VERSION",
+          "description": "次經版本 default:c1933",
+          "type": "string",
+          "default": "c1933",
+          "key": "version"
+        },
+        {
+          "name": "orig",
+          "description": "查詢形式 0：經文關鍵字",
+          "type": "string",
+          "enum": [
+            {
+              "code": "0",
+              "label": "經文關鍵字"
+            }
+          ],
+          "key": "orig"
+        },
+        {
+          "name": "q",
+          "description": "查詢內容",
+          "type": "string",
+          "key": "q",
+          "required": true
+        },
+        {
+          "name": "RANGE",
+          "description": "查詢模式 0：全部 3:範圍 default:0",
+          "type": "string",
+          "default": "0",
+          "enum": [
+            {
+              "code": "0",
+              "label": "全部"
+            },
+            {
+              "code": "3",
+              "label": "範圍"
+            }
+          ],
+          "key": "range"
+        },
+        {
+          "name": "range_bid",
+          "description": "查詢模式=3 時，開始經卷編號101-115（書卷編號 101-115（101 馬加比一書 … 115 以斯帖補篇））",
+          "type": "integer",
+          "key": "range_bid",
+          "minimum": 101,
+          "maximum": 115
+        },
+        {
+          "name": "range_eid",
+          "description": "查詢模式=3 時，結束經卷編號101-115（書卷編號 101-115（101 馬加比一書 … 115 以斯帖補篇））",
+          "type": "integer",
+          "key": "range_eid",
+          "minimum": 101,
+          "maximum": 115
+        },
+        {
+          "name": "limit",
+          "description": "最多顯示幾筆 default:unlimited",
+          "type": "integer",
+          "key": "limit"
+        },
+        {
+          "name": "offset",
+          "description": "跳過幾筆 default:0",
+          "type": "integer",
+          "default": "0",
+          "key": "offset"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        },
+        {
+          "name": "count_only",
+          "description": "是否只輸出筆數 1:是 0:否",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "是"
+            },
+            {
+              "code": "0",
+              "label": "否"
+            }
+          ],
+          "key": "count_only"
+        },
+        {
+          "name": "index_only",
+          "description": "是否只輸出經卷（不含內容） 1:是 0:否",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "是"
+            },
+            {
+              "code": "0",
+              "label": "否"
+            }
+          ],
+          "key": "index_only"
+        }
+      ],
+      "sectionHash": "2938c431f157916105d8eadd6f24e9f281643fe136d72e94e7ccc9e5c36374cd",
+      "responseFormat": "json",
+      "confirmed": true,
+      "bookSet": "apocrypha",
+      "responseSchema": "SearchResult",
+      "notes": [
+        "符合筆數超過 500 時上游回傳 Fail:record count > 500；未指定 limit 時本服務自動帶 limit=100。",
+        "VERSION 不存在時上游改回傳 XML（<result><status>Fail:… not found!</status></result>），本服務轉為 JSON。"
+      ],
+      "example": {
+        "q": "主",
+        "limit": 3
+      },
+      "inject": {
+        "limit": "100"
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "orig",
+          "key",
+          "record_count",
+          "record"
+        ],
+        "recordKeys": [
+          "id",
+          "chineses",
+          "bid",
+          "engs",
+          "chap",
+          "sec",
+          "bible_text"
+        ]
+      }
+    },
+    {
+      "file": "seaf.php",
+      "tool": "fhl_seaf",
+      "purpose": "使徒教父查詢功能",
+      "output": "record_count:資料筆數\norig:查詢形式 0：經文關鍵字\nkey:輸入的查詢字串\n查詢回傳資料放record中，\n內含：\nid: 經節絕對編號\nchineses: 經卷中文縮寫\nbid: 經卷編號\nengs: 經卷英文縮寫\nchap: 章\nsec: 節\nbible_text: 經文",
+      "params": [
+        {
+          "name": "orig",
+          "description": "查詢形式 0：經文關鍵字",
+          "type": "string",
+          "enum": [
+            {
+              "code": "0",
+              "label": "經文關鍵字"
+            }
+          ],
+          "key": "orig"
+        },
+        {
+          "name": "q",
+          "description": "查詢內容",
+          "type": "string",
+          "key": "q",
+          "required": true
+        },
+        {
+          "name": "RANGE",
+          "description": "查詢模式 0：全部 3:範圍 default:0",
+          "type": "string",
+          "default": "0",
+          "enum": [
+            {
+              "code": "0",
+              "label": "全部"
+            },
+            {
+              "code": "3",
+              "label": "範圍"
+            }
+          ],
+          "key": "range"
+        },
+        {
+          "name": "range_bid",
+          "description": "查詢模式=3 時，開始經卷編號201-217（書卷編號 201-217（201 革利免一書 … 217 衆長老的傳統））",
+          "type": "integer",
+          "key": "range_bid",
+          "minimum": 201,
+          "maximum": 217
+        },
+        {
+          "name": "range_eid",
+          "description": "查詢模式=3 時，結束經卷編號201-217（書卷編號 201-217（201 革利免一書 … 217 衆長老的傳統））",
+          "type": "integer",
+          "key": "range_eid",
+          "minimum": 201,
+          "maximum": 217
+        },
+        {
+          "name": "limit",
+          "description": "最多顯示幾筆 default:unlimited",
+          "type": "integer",
+          "key": "limit"
+        },
+        {
+          "name": "offset",
+          "description": "跳過幾筆 default:0",
+          "type": "integer",
+          "default": "0",
+          "key": "offset"
+        },
+        {
+          "name": "gb",
+          "description": "繁簡體中文選擇 1:簡體 0:正體",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "簡體"
+            },
+            {
+              "code": "0",
+              "label": "正體"
+            }
+          ],
+          "key": "gb"
+        },
+        {
+          "name": "count_only",
+          "description": "是否只輸出筆數 1:是 0:否",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "是"
+            },
+            {
+              "code": "0",
+              "label": "否"
+            }
+          ],
+          "key": "count_only"
+        },
+        {
+          "name": "index_only",
+          "description": "是否只輸出經卷（不含內容） 1:是 0:否",
+          "type": "boolean",
+          "enum": [
+            {
+              "code": "1",
+              "label": "是"
+            },
+            {
+              "code": "0",
+              "label": "否"
+            }
+          ],
+          "key": "index_only"
+        }
+      ],
+      "sectionHash": "40e5134109515e69cfdfb15b0eebdb8eeb7b8e544afb20d90b5b9638936d9c05",
+      "responseFormat": "json",
+      "confirmed": true,
+      "bookSet": "fathers",
+      "responseSchema": "SearchResult",
+      "notes": [
+        "符合筆數超過 500 時上游回傳 Fail:record count > 500；未指定 limit 時本服務自動帶 limit=100。"
+      ],
+      "example": {
+        "q": "主",
+        "limit": 3
+      },
+      "inject": {
+        "limit": "100"
+      },
+      "observed": {
+        "keys": [
+          "status",
+          "orig",
+          "key",
+          "record_count",
+          "record"
+        ],
+        "recordKeys": [
+          "id",
+          "chineses",
+          "bid",
+          "engs",
+          "chap",
+          "sec",
+          "bible_text"
+        ]
+      }
+    }
+  ],
+  "versions": [
+    {
+      "code": "unv",
+      "name": "FHL和合本",
+      "strong": true,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "kjv",
+      "name": "KJV",
+      "strong": true,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "bhs",
+      "name": "舊約馬索拉原文",
+      "strong": false,
+      "ntonly": false,
+      "otonly": true
+    },
+    {
+      "code": "apskcl",
+      "name": "紅皮聖經全羅",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "apskhl",
+      "name": "紅皮聖經漢羅",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "bklcl",
+      "name": "巴克禮全羅",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "tghg",
+      "name": "巴克禮台漢本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "ttvhl2021",
+      "name": "現代台語2021版漢字",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "ttvcl2021",
+      "name": "現代台語2021版全羅",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "bklhl",
+      "name": "巴克禮漢羅",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "tte",
+      "name": "現代台語2013版全羅",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "ttvh",
+      "name": "現代台語2013版漢字",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "fhlwh",
+      "name": "新約原文",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "bbe",
+      "name": "BBE",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "asv",
+      "name": "ASV",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "web",
+      "name": "WEB",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "darby",
+      "name": "Darby",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "erv",
+      "name": "ERV",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "baru",
+      "name": "印尼聖經",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "ind1958",
+      "name": "印尼舊聖經",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "vietnamese",
+      "name": "越南聖經",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "russian",
+      "name": "俄文聖經",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "korean",
+      "name": "韓文聖經",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "thv2e",
+      "name": "現代客語全羅",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "hakka",
+      "name": "汕頭客語聖經",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "recover",
+      "name": "恢復本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "wlunv",
+      "name": "深文理和合本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "prebklcl",
+      "name": "馬雅各全羅",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "genbklcl",
+      "name": "",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "nt1864",
+      "name": "新遺詔聖經",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "jp",
+      "name": "日語聖經",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "csb",
+      "name": "中文標準譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "cnet",
+      "name": "NET聖經中譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "cccbst",
+      "name": "四福音書共同譯本",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "tcv95",
+      "name": "現代中文譯本1995版",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "tcv2019",
+      "name": "現代中文譯本2019版",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "rcuv",
+      "name": "和合本2010",
+      "strong": true,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "bunun",
+      "name": "布農語聖經",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "pinuyan",
+      "name": "卑南語",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "tay",
+      "name": "泰雅爾語聖經",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "tsou",
+      "name": "鄒語聖經",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "rukai",
+      "name": "魯凱語聖經",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "ams",
+      "name": "阿美語1997",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "amis2",
+      "name": "阿美語2019",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "sed",
+      "name": "賽德克族Tgdaya語",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "ttnt94",
+      "name": "達悟語新約聖經",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "wanshandia",
+      "name": "萬山魯凱語馬可福音",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "maolindia",
+      "name": "茂林魯凱語馬可福音",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "tonadia",
+      "name": "多納魯凱語馬可福音",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "tibet",
+      "name": "藏語聖經",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "cvul",
+      "name": "武加大譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "nvul",
+      "name": "新武加大譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "lcc",
+      "name": "呂振中譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "ofm",
+      "name": "思高譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "cumv",
+      "name": "官話和合本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "pmb",
+      "name": "北京官話譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "cuwv",
+      "name": "文理和合本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "cuwve",
+      "name": "淺文理和合本",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "cwang",
+      "name": "王元德官話譯本",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "orthdox",
+      "name": "俄羅斯正教文理譯本",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "basset",
+      "name": "白日昇徐約翰文理譯本",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "mormil",
+      "name": "神天聖書",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "wdv",
+      "name": "文理委辦譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "ssewb",
+      "name": "施約瑟淺文理譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "marwb",
+      "name": "馬殊曼譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "goddwb",
+      "name": "高德譯本",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "hudsonwb",
+      "name": "胡德邁譯本",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "deanwb",
+      "name": "粦為仁譯本",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "sgebklcl",
+      "name": "全民台語聖經全羅",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "sgebklhl",
+      "name": "全民台語聖經漢羅",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "cmxuhsb",
+      "name": "徐匯官話新譯福音",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "cwangdmm",
+      "name": "王多默聖史宗徒行實",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "cwhsiaosb",
+      "name": "蕭舜華官話",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "cwmgbm",
+      "name": "四人小組譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "cwfaubsb",
+      "name": "聖保祿書翰並數位宗徒涵牘",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "cwjdsb",
+      "name": "德如瑟四史聖經譯註",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "cwkfag",
+      "name": "郭實臘新遺詔書和舊遺詔聖書",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "cwliwysb",
+      "name": "宗徒大事錄和新經譯義",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "cwmxb",
+      "name": "馬相伯救世福音",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "cwont",
+      "name": "俄羅斯正教新遺詔聖經",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "cwplbsb",
+      "name": "卜士傑新經公函與默示錄",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "cwtaiping",
+      "name": "太平天國文理譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "cxubinwsb",
+      "name": "許彬文四史全編",
+      "strong": false,
+      "ntonly": true,
+      "otonly": false
+    },
+    {
+      "code": "cogorw",
+      "name": "高連茨基聖詠經",
+      "strong": false,
+      "ntonly": false,
+      "otonly": true
+    },
+    {
+      "code": "wcb",
+      "name": "環球譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    },
+    {
+      "code": "ncv",
+      "name": "新譯本",
+      "strong": false,
+      "ntonly": false,
+      "otonly": false
+    }
+  ],
+  "books": [
+    {
+      "bid": 1,
+      "engs": "Gen",
+      "engf": "Genesis",
+      "chineses": "創",
+      "chinesef": "創世記",
+      "aliases": [
+        "Ge"
+      ],
+      "usfm": "GEN"
+    },
+    {
+      "bid": 2,
+      "engs": "Ex",
+      "engf": "Exodus",
+      "chineses": "出",
+      "chinesef": "出埃及記",
+      "aliases": [],
+      "usfm": "EXO"
+    },
+    {
+      "bid": 3,
+      "engs": "Lev",
+      "engf": "Leviticus",
+      "chineses": "利",
+      "chinesef": "利未記",
+      "aliases": [
+        "Le"
+      ],
+      "usfm": "LEV"
+    },
+    {
+      "bid": 4,
+      "engs": "Num",
+      "engf": "Numbers",
+      "chineses": "民",
+      "chinesef": "民數記",
+      "aliases": [
+        "Nu"
+      ],
+      "usfm": "NUM"
+    },
+    {
+      "bid": 5,
+      "engs": "Deut",
+      "engf": "Deuteronomy",
+      "chineses": "申",
+      "chinesef": "申命記",
+      "aliases": [
+        "De"
+      ],
+      "usfm": "DEU"
+    },
+    {
+      "bid": 6,
+      "engs": "Josh",
+      "engf": "Joshua",
+      "chineses": "書",
+      "chinesef": "約書亞記",
+      "aliases": [
+        "Jos"
+      ],
+      "usfm": "JOS"
+    },
+    {
+      "bid": 7,
+      "engs": "Judg",
+      "engf": "Judges",
+      "chineses": "士",
+      "chinesef": "士師記",
+      "aliases": [
+        "Jud"
+      ],
+      "usfm": "JDG"
+    },
+    {
+      "bid": 8,
+      "engs": "Ruth",
+      "engf": "Ruth",
+      "chineses": "得",
+      "chinesef": "路得記",
+      "aliases": [
+        "Ru"
+      ],
+      "usfm": "RUT"
+    },
+    {
+      "bid": 9,
+      "engs": "1 Sam",
+      "engf": "First Samuel",
+      "chineses": "撒上",
+      "chinesef": "撒母耳記上",
+      "aliases": [
+        "1Sa"
+      ],
+      "usfm": "1SA"
+    },
+    {
+      "bid": 10,
+      "engs": "2 Sam",
+      "engf": "Second Samuel",
+      "chineses": "撒下",
+      "chinesef": "撒母耳記下",
+      "aliases": [
+        "2Sa"
+      ],
+      "usfm": "2SA"
+    },
+    {
+      "bid": 11,
+      "engs": "1 Kin",
+      "engf": "First Kings",
+      "chineses": "王上",
+      "chinesef": "列王紀上",
+      "aliases": [
+        "1Ki"
+      ],
+      "usfm": "1KI"
+    },
+    {
+      "bid": 12,
+      "engs": "2 Kin",
+      "engf": "Second Kings",
+      "chineses": "王下",
+      "chinesef": "列王紀下",
+      "aliases": [
+        "2Ki"
+      ],
+      "usfm": "2KI"
+    },
+    {
+      "bid": 13,
+      "engs": "1 Chr",
+      "engf": "First Chronicles",
+      "chineses": "代上",
+      "chinesef": "歷代志上",
+      "aliases": [
+        "1Ch"
+      ],
+      "usfm": "1CH"
+    },
+    {
+      "bid": 14,
+      "engs": "2 Chr",
+      "engf": "Second Chronicles",
+      "chineses": "代下",
+      "chinesef": "歷代志下",
+      "aliases": [
+        "2Ch"
+      ],
+      "usfm": "2CH"
+    },
+    {
+      "bid": 15,
+      "engs": "Ezra",
+      "engf": "Ezra",
+      "chineses": "拉",
+      "chinesef": "以斯拉記",
+      "aliases": [
+        "Ezr"
+      ],
+      "usfm": "EZR"
+    },
+    {
+      "bid": 16,
+      "engs": "Neh",
+      "engf": "Nehemiah",
+      "chineses": "尼",
+      "chinesef": "尼希米記",
+      "aliases": [
+        "Ne"
+      ],
+      "usfm": "NEH"
+    },
+    {
+      "bid": 17,
+      "engs": "Esth",
+      "engf": "Esther",
+      "chineses": "斯",
+      "chinesef": "以斯帖記",
+      "aliases": [
+        "Es"
+      ],
+      "usfm": "EST"
+    },
+    {
+      "bid": 18,
+      "engs": "Job",
+      "engf": "Job",
+      "chineses": "伯",
+      "chinesef": "約伯記",
+      "aliases": [],
+      "usfm": "JOB"
+    },
+    {
+      "bid": 19,
+      "engs": "Ps",
+      "engf": "Psalms",
+      "chineses": "詩",
+      "chinesef": "詩篇",
+      "aliases": [],
+      "usfm": "PSA"
+    },
+    {
+      "bid": 20,
+      "engs": "Prov",
+      "engf": "Proverbs",
+      "chineses": "箴",
+      "chinesef": "箴言",
+      "aliases": [
+        "Pr"
+      ],
+      "usfm": "PRO"
+    },
+    {
+      "bid": 21,
+      "engs": "Eccl",
+      "engf": "Ecclesiastes",
+      "chineses": "傳",
+      "chinesef": "傳道書",
+      "aliases": [
+        "Ec"
+      ],
+      "usfm": "ECC"
+    },
+    {
+      "bid": 22,
+      "engs": "Song",
+      "engf": "Song of Solomon",
+      "chineses": "歌",
+      "chinesef": "雅歌",
+      "aliases": [
+        "So"
+      ],
+      "usfm": "SNG"
+    },
+    {
+      "bid": 23,
+      "engs": "Is",
+      "engf": "Isaiah",
+      "chineses": "賽",
+      "chinesef": "以賽亞書",
+      "aliases": [
+        "Isa"
+      ],
+      "usfm": "ISA"
+    },
+    {
+      "bid": 24,
+      "engs": "Jer",
+      "engf": "Jeremiah",
+      "chineses": "耶",
+      "chinesef": "耶利米書",
+      "aliases": [],
+      "usfm": "JER"
+    },
+    {
+      "bid": 25,
+      "engs": "Lam",
+      "engf": "Lamentations",
+      "chineses": "哀",
+      "chinesef": "耶利米哀歌",
+      "aliases": [
+        "La"
+      ],
+      "usfm": "LAM"
+    },
+    {
+      "bid": 26,
+      "engs": "Ezek",
+      "engf": "Ezekiel",
+      "chineses": "結",
+      "chinesef": "以西結書",
+      "aliases": [
+        "Eze"
+      ],
+      "usfm": "EZK"
+    },
+    {
+      "bid": 27,
+      "engs": "Dan",
+      "engf": "Daniel",
+      "chineses": "但",
+      "chinesef": "但以理書",
+      "aliases": [
+        "Da"
+      ],
+      "usfm": "DAN"
+    },
+    {
+      "bid": 28,
+      "engs": "Hos",
+      "engf": "Hosea",
+      "chineses": "何",
+      "chinesef": "何西阿書",
+      "aliases": [
+        "Ho"
+      ],
+      "usfm": "HOS"
+    },
+    {
+      "bid": 29,
+      "engs": "Joel",
+      "engf": "Joel",
+      "chineses": "珥",
+      "chinesef": "約珥書",
+      "aliases": [
+        "Joe"
+      ],
+      "usfm": "JOL"
+    },
+    {
+      "bid": 30,
+      "engs": "Amos",
+      "engf": "Amos",
+      "chineses": "摩",
+      "chinesef": "阿摩司書",
+      "aliases": [
+        "Am"
+      ],
+      "usfm": "AMO"
+    },
+    {
+      "bid": 31,
+      "engs": "Obad",
+      "engf": "Obadiah",
+      "chineses": "俄",
+      "chinesef": "俄巴底亞書",
+      "aliases": [
+        "Ob"
+      ],
+      "usfm": "OBA"
+    },
+    {
+      "bid": 32,
+      "engs": "Jon",
+      "engf": "Jonah",
+      "chineses": "拿",
+      "chinesef": "約拿書",
+      "aliases": [],
+      "usfm": "JON"
+    },
+    {
+      "bid": 33,
+      "engs": "Mic",
+      "engf": "Micah",
+      "chineses": "彌",
+      "chinesef": "彌迦書",
+      "aliases": [],
+      "usfm": "MIC"
+    },
+    {
+      "bid": 34,
+      "engs": "Nah",
+      "engf": "Nahum",
+      "chineses": "鴻",
+      "chinesef": "那鴻書",
+      "aliases": [
+        "Na"
+      ],
+      "usfm": "NAM"
+    },
+    {
+      "bid": 35,
+      "engs": "Hab",
+      "engf": "Habakkuk",
+      "chineses": "哈",
+      "chinesef": "哈巴谷書",
+      "aliases": [],
+      "usfm": "HAB"
+    },
+    {
+      "bid": 36,
+      "engs": "Zeph",
+      "engf": "Zephaniah",
+      "chineses": "番",
+      "chinesef": "西番雅書",
+      "aliases": [
+        "Zep"
+      ],
+      "usfm": "ZEP"
+    },
+    {
+      "bid": 37,
+      "engs": "Hag",
+      "engf": "Haggai",
+      "chineses": "該",
+      "chinesef": "哈該書",
+      "aliases": [],
+      "usfm": "HAG"
+    },
+    {
+      "bid": 38,
+      "engs": "Zech",
+      "engf": "Zechariah",
+      "chineses": "亞",
+      "chinesef": "撒迦利亞書",
+      "aliases": [
+        "Zec"
+      ],
+      "usfm": "ZEC"
+    },
+    {
+      "bid": 39,
+      "engs": "Mal",
+      "engf": "Malachi",
+      "chineses": "瑪",
+      "chinesef": "瑪拉基書",
+      "aliases": [],
+      "usfm": "MAL"
+    },
+    {
+      "bid": 40,
+      "engs": "Matt",
+      "engf": "Matthew",
+      "chineses": "太",
+      "chinesef": "馬太福音",
+      "aliases": [
+        "Mt"
+      ],
+      "usfm": "MAT"
+    },
+    {
+      "bid": 41,
+      "engs": "Mark",
+      "engf": "Mark",
+      "chineses": "可",
+      "chinesef": "馬可福音",
+      "aliases": [
+        "Mr"
+      ],
+      "usfm": "MRK"
+    },
+    {
+      "bid": 42,
+      "engs": "Luke",
+      "engf": "Luke",
+      "chineses": "路",
+      "chinesef": "路加福音",
+      "aliases": [
+        "Lu"
+      ],
+      "usfm": "LUK"
+    },
+    {
+      "bid": 43,
+      "engs": "John",
+      "engf": "John",
+      "chineses": "約",
+      "chinesef": "約翰福音",
+      "aliases": [
+        "Joh"
+      ],
+      "usfm": "JHN"
+    },
+    {
+      "bid": 44,
+      "engs": "Acts",
+      "engf": "Acts",
+      "chineses": "徒",
+      "chinesef": "使徒行傳",
+      "aliases": [
+        "Ac"
+      ],
+      "usfm": "ACT"
+    },
+    {
+      "bid": 45,
+      "engs": "Rom",
+      "engf": "Romans",
+      "chineses": "羅",
+      "chinesef": "羅馬書",
+      "aliases": [
+        "Ro"
+      ],
+      "usfm": "ROM"
+    },
+    {
+      "bid": 46,
+      "engs": "1 Cor",
+      "engf": "First Corinthians",
+      "chineses": "林前",
+      "chinesef": "哥林多前書",
+      "aliases": [
+        "1Co"
+      ],
+      "usfm": "1CO"
+    },
+    {
+      "bid": 47,
+      "engs": "2 Cor",
+      "engf": "Second Corinthians",
+      "chineses": "林後",
+      "chinesef": "哥林多後書",
+      "aliases": [
+        "2Co"
+      ],
+      "usfm": "2CO"
+    },
+    {
+      "bid": 48,
+      "engs": "Gal",
+      "engf": "Galatians",
+      "chineses": "加",
+      "chinesef": "加拉太書",
+      "aliases": [
+        "Ga"
+      ],
+      "usfm": "GAL"
+    },
+    {
+      "bid": 49,
+      "engs": "Eph",
+      "engf": "Ephesians",
+      "chineses": "弗",
+      "chinesef": "以弗所書",
+      "aliases": [],
+      "usfm": "EPH"
+    },
+    {
+      "bid": 50,
+      "engs": "Phil",
+      "engf": "Philippians",
+      "chineses": "腓",
+      "chinesef": "腓立比書",
+      "aliases": [
+        "Php"
+      ],
+      "usfm": "PHP"
+    },
+    {
+      "bid": 51,
+      "engs": "Col",
+      "engf": "Colossians",
+      "chineses": "西",
+      "chinesef": "歌羅西書",
+      "aliases": [],
+      "usfm": "COL"
+    },
+    {
+      "bid": 52,
+      "engs": "1 Thess",
+      "engf": "First Thessalonians",
+      "chineses": "帖前",
+      "chinesef": "帖撒羅尼迦前書",
+      "aliases": [
+        "1Th"
+      ],
+      "usfm": "1TH"
+    },
+    {
+      "bid": 53,
+      "engs": "2 Thess",
+      "engf": "Second Thessalonians",
+      "chineses": "帖後",
+      "chinesef": "帖撒羅尼迦後書",
+      "aliases": [
+        "2Th"
+      ],
+      "usfm": "2TH"
+    },
+    {
+      "bid": 54,
+      "engs": "1 Tim",
+      "engf": "First Timothy",
+      "chineses": "提前",
+      "chinesef": "提摩太前書",
+      "aliases": [
+        "1Ti"
+      ],
+      "usfm": "1TI"
+    },
+    {
+      "bid": 55,
+      "engs": "2 Tim",
+      "engf": "Second Timothy",
+      "chineses": "提後",
+      "chinesef": "提摩太後書",
+      "aliases": [
+        "2Ti"
+      ],
+      "usfm": "2TI"
+    },
+    {
+      "bid": 56,
+      "engs": "Titus",
+      "engf": "Titus",
+      "chineses": "多",
+      "chinesef": "提多書",
+      "aliases": [
+        "Tit"
+      ],
+      "usfm": "TIT"
+    },
+    {
+      "bid": 57,
+      "engs": "Philem",
+      "engf": "Philemon",
+      "chineses": "門",
+      "chinesef": "腓利門書",
+      "aliases": [
+        "Phm"
+      ],
+      "usfm": "PHM"
+    },
+    {
+      "bid": 58,
+      "engs": "Heb",
+      "engf": "Hebrews",
+      "chineses": "來",
+      "chinesef": "希伯來書",
+      "aliases": [],
+      "usfm": "HEB"
+    },
+    {
+      "bid": 59,
+      "engs": "James",
+      "engf": "James",
+      "chineses": "雅",
+      "chinesef": "雅各書",
+      "aliases": [
+        "Jas"
+      ],
+      "usfm": "JAS"
+    },
+    {
+      "bid": 60,
+      "engs": "1 Pet",
+      "engf": "First Peter",
+      "chineses": "彼前",
+      "chinesef": "彼得前書",
+      "aliases": [
+        "1Pe"
+      ],
+      "usfm": "1PE"
+    },
+    {
+      "bid": 61,
+      "engs": "2 Pet",
+      "engf": "Second Peter",
+      "chineses": "彼後",
+      "chinesef": "彼得後書",
+      "aliases": [
+        "2Pe"
+      ],
+      "usfm": "2PE"
+    },
+    {
+      "bid": 62,
+      "engs": "1 John",
+      "engf": "First John",
+      "chineses": "約一",
+      "chinesef": "約翰一書",
+      "aliases": [
+        "1Jo"
+      ],
+      "usfm": "1JN"
+    },
+    {
+      "bid": 63,
+      "engs": "2 John",
+      "engf": "second John",
+      "chineses": "約二",
+      "chinesef": "約翰二書",
+      "aliases": [
+        "2Jo"
+      ],
+      "usfm": "2JN"
+    },
+    {
+      "bid": 64,
+      "engs": "3 John",
+      "engf": "Third John",
+      "chineses": "約三",
+      "chinesef": "約翰三書",
+      "aliases": [
+        "3Jo"
+      ],
+      "usfm": "3JN"
+    },
+    {
+      "bid": 65,
+      "engs": "Jude",
+      "engf": "Jude",
+      "chineses": "猶",
+      "chinesef": "猶大書",
+      "aliases": [],
+      "usfm": "JUD"
+    },
+    {
+      "bid": 66,
+      "engs": "Rev",
+      "engf": "Revelation",
+      "chineses": "啟",
+      "chinesef": "啟示錄",
+      "aliases": [
+        "Re"
+      ],
+      "usfm": "REV"
+    },
+    {
+      "bid": 101,
+      "engs": "1Mc",
+      "chineses": "馬一",
+      "aliases": [],
+      "usfm": "1MA"
+    },
+    {
+      "bid": 102,
+      "engs": "2Mc",
+      "chineses": "馬二",
+      "aliases": [],
+      "usfm": "2MA"
+    },
+    {
+      "bid": 103,
+      "engs": "Tb",
+      "chineses": "比",
+      "aliases": [],
+      "usfm": "TOB"
+    },
+    {
+      "bid": 104,
+      "engs": "Jth",
+      "chineses": "滴",
+      "aliases": [],
+      "usfm": "JDT"
+    },
+    {
+      "bid": 105,
+      "engs": "Sir",
+      "chineses": "便",
+      "aliases": [],
+      "usfm": "SIR"
+    },
+    {
+      "bid": 106,
+      "engs": "Ws",
+      "chineses": "所",
+      "aliases": [],
+      "usfm": "WIS"
+    },
+    {
+      "bid": 107,
+      "engs": "1Es",
+      "chineses": "拉上",
+      "aliases": [],
+      "usfm": "1ES"
+    },
+    {
+      "bid": 108,
+      "engs": "2Es",
+      "chineses": "拉下",
+      "aliases": [],
+      "usfm": "2ES"
+    },
+    {
+      "bid": 109,
+      "engs": "Bar",
+      "chineses": "巴",
+      "aliases": [],
+      "usfm": "BAR"
+    },
+    {
+      "bid": 110,
+      "engs": "EpJer",
+      "chineses": "耶信",
+      "aliases": [],
+      "usfm": "LJE"
+    },
+    {
+      "bid": 111,
+      "engs": "PrM",
+      "chineses": "禱",
+      "aliases": [],
+      "usfm": "MAN"
+    },
+    {
+      "bid": 112,
+      "engs": "STHC",
+      "chineses": "童",
+      "aliases": [],
+      "usfm": "S3Y"
+    },
+    {
+      "bid": 113,
+      "engs": "Sus",
+      "chineses": "蘇",
+      "aliases": [],
+      "usfm": "SUS"
+    },
+    {
+      "bid": 114,
+      "engs": "Bel",
+      "chineses": "勒",
+      "aliases": [],
+      "usfm": "BEL"
+    },
+    {
+      "bid": 115,
+      "engs": "Re",
+      "chineses": "斯補",
+      "aliases": [],
+      "usfm": "ESG"
+    },
+    {
+      "bid": 201,
+      "engs": "1 Clem.",
+      "chineses": "革利免一書",
+      "aliases": []
+    },
+    {
+      "bid": 202,
+      "engs": "2 Clem.",
+      "chineses": "革利免二書",
+      "aliases": []
+    },
+    {
+      "bid": 203,
+      "engs": "Ign. Eph.",
+      "chineses": "伊格那丟致以弗所人書",
+      "aliases": []
+    },
+    {
+      "bid": 204,
+      "engs": "Ign. Mag.",
+      "chineses": "伊格那丟致馬內夏人書",
+      "aliases": []
+    },
+    {
+      "bid": 205,
+      "engs": "Ign. Trall.",
+      "chineses": "伊格那丟致他拉勒人書",
+      "aliases": []
+    },
+    {
+      "bid": 206,
+      "engs": "Ign. Rom.",
+      "chineses": "伊格那丟致羅馬人書",
+      "aliases": []
+    },
+    {
+      "bid": 207,
+      "engs": "Ign. Phld.",
+      "chineses": "伊格那丟致非拉鐵非人書",
+      "aliases": []
+    },
+    {
+      "bid": 208,
+      "engs": "Ign. Smyrn.",
+      "chineses": "伊格那丟致士每拿人書",
+      "aliases": []
+    },
+    {
+      "bid": 209,
+      "engs": "Ign. Pol.",
+      "chineses": "伊格那丟致坡旅甲書",
+      "aliases": []
+    },
+    {
+      "bid": 210,
+      "engs": "Pol. Phil.",
+      "chineses": "坡旅甲致腓立比人書",
+      "aliases": []
+    },
+    {
+      "bid": 211,
+      "engs": "Mart. Pol.",
+      "chineses": "坡旅甲殉道記",
+      "aliases": []
+    },
+    {
+      "bid": 212,
+      "engs": "Did.",
+      "chineses": "十二使徒遺訓",
+      "aliases": []
+    },
+    {
+      "bid": 213,
+      "engs": "Barn.",
+      "chineses": "巴拿巴書信",
+      "aliases": []
+    },
+    {
+      "bid": 214,
+      "engs": "Herm.",
+      "chineses": "黑馬牧人書",
+      "aliases": []
+    },
+    {
+      "bid": 215,
+      "engs": "Diogn.",
+      "chineses": "致丟格那妥書",
+      "aliases": []
+    },
+    {
+      "bid": 216,
+      "engs": "Frag. Papias",
+      "chineses": "帕皮亞殘篇",
+      "aliases": []
+    },
+    {
+      "bid": 217,
+      "engs": "Trad. Elders",
+      "chineses": "衆長老的傳統",
+      "aliases": []
+    }
+  ]
+}
